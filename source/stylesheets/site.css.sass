@@ -1,0 +1,243 @@
+@import compass/css3
+@import compass/utilities
+@import ifkit/position
+@import ifkit/form_reset
+@import ifkit/normalize
+
+// == Constants ===============================================================
+
+// Dimensions
+$page-width: 1024px          // Full page width
+$left-column: 225px          // The left side with the logo
+$nav-height: 36px
+
+// Color swatches
+$bg: #fff
+
+// Text swatches
+$txt: #404040                // Text color
+
+/* == Basic reset ============================================================= */
+
+@import compass/reset
+
+/* == Form elements reset ===================================================== */
+
+@include if-form-reset
+
+/* == Shared classes ========================================================== */
+
+/* Page */
+%page
+  +box-sizing(border-box)
+  width: $page-width
+  margin: 0 auto
+
+/* Type: Exo 100 */
+%exo-100
+  font-family: exo, 'helvetica neue', sans-serif
+  font-weight: 100
+
+/* Type: Exo 100 caps */
+%exo-100-caps
+  @extend %exo-100
+  letter-spacing: 1px
+  text-transform: uppercase
+
+/* Type: Armata 700 caps */
+%armata-700-caps
+  font-family: armata, sans-serif
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: -1px
+
+/* Type: Exo 700 caps */
+%exo-700-caps
+  font-family: exo, sans-serif
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: 1px
+
+/* == Content normalize ======================================================= */
+
+.content
+  +if-content
+
+/* == Base styles ============================================================= */
+
+html, td, textarea, input, button
+  font-family: armata
+  font-size: 9pt
+  line-height: 1.5
+  color: $txt
+
+html
+  background: $bg
+
+html, body
+  min-height: 100%
+
+a
+  color: #999
+  text-decoration: none
+  border-bottom: solid 1px rgba($txt, 0.1)
+
+/* == Logo ==================================================================== */
+
+#logo
+  +if-absolute(0, 0, auto, 0)
+
+  > div
+    @extend %page
+    padding: 30px 0
+
+  a
+    position: relative
+    width: 150px
+    height: 79px
+    overflow: hidden
+
+  a > div
+    +if-absolute(0, auto, auto, 0)
+
+  a .dark
+    display: none
+
+/* == Main introduction ======================================================= */
+
+header.intro
+  background: #111
+
+  >div
+    @extend %page
+    padding: 40px 0 100px $left-column
+
+  // Text stuff
+  &
+    color: #666
+    text-shadow: 1px 1px 2px rgba(black, 0.2)
+
+  // Venue info (date)
+  .info
+    line-height: 1.5
+
+    strong
+      @extend %exo-700-caps
+      font-size: 1.1em
+      color: white
+      display: block
+
+    p
+      margin-bottom: 20px
+
+
+  // Speakers list
+  .speakers
+    margin-top: 50px
+
+    +if-relative($left: -5px)
+
+    font-size: 28pt
+    text-transform: uppercase
+    width: 500px
+    line-height: 1.5
+    color: white
+
+    a
+      color: white
+      text-decoration: none
+      border-bottom: dotted 1px rgba(white, 0.2)
+      padding: 0 3px
+      margin-right: 8px
+      text-shadow: 3px 3px 0 rgba(black, 0.1)
+
+    a:hover
+      +border-radius(2px)
+      background: rgba(white, 0.05)
+
+/* == Main navigation ========================================================= */
+nav.main
+  &
+    margin-top: -$nav-height
+
+  > div
+    @extend %page
+    padding-left: $left-column
+
+  // Lineheights
+  a, &
+    height: $nav-height
+    line-height: $nav-height
+    overflow: hidden
+
+  // Primary
+  .primary
+    position: relative
+    z-index: 1
+    background: $bg
+    +border-top-radius(2px)
+    overflow: hidden
+
+  .social, .primary
+    float: left
+
+  .social
+    padding: 0 20px
+
+  li, a
+    display: block
+    float: left
+
+  // Each link
+  a
+    height: 40px
+    line-height: 40px
+    padding: 0 20px
+    @extend %armata-700-caps
+    color: $txt
+    border-bottom: 0
+    +transition(background-color 100ms linear)
+
+  a:hover
+    background-color: #eee
+
+  // Caps
+  .primary li:first-child a
+    padding-left: 30px
+  .primary li:last-child a
+    padding-right: 30px
+
+/* == Sections ================================================================ */
+section
+  margin: 80px 0
+
+  // The heading
+  > hgroup
+    @extend %page
+    padding: 30px 0
+    padding-left: $left-column
+
+    // The text
+    h1, h2, h3
+      @extend %exo-100-caps
+      color: #aaa
+      font-size: 32pt
+      text-shadow: 2px 2px 0 rgba(black, 0.08)
+
+    // The notch
+    &:before
+      content: ''
+      display: block
+      width: 26px
+      height: 3px
+      background: #888
+      margin-bottom: 15px
+      +border-radius(2px)
+
+  // Display area
+  > .display
+    background: #eee
+    padding: 30px 0
+
+    > div
+      @extend %page

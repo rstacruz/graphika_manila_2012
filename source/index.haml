@@ -1,2 +1,60 @@
-%h1
-  yo
+/ == Introduction ============================================================
+#logo
+  %div
+    %a{href: '#'}
+      .light
+        = image_tag 'sprite/logo-white.png', alt: 'Graphika Manila'
+      .dark
+        = image_tag 'sprite/logo-black.png', alt: 'Graphika Manila'
+
+
+/ == Introduction ============================================================
+%header.intro
+  %div
+    .info
+      :markdown
+        __August 11, 2012__
+        10AM to 6PM
+
+        __SMX Convention Center__
+        Mall of Asia Complex, Pasay, Metro Manila
+
+    .speakers
+      :markdown
+        [Psyop](#speakers), [Gmunk](#speakers), [Droga5](#speakers), [JP
+        Cuison](#speakers), [Jerome Austria](#speakers), [Create.PH](#speakers)
+
+
+/ == Main navigation =========================================================
+%nav.main
+  %div
+    .primary
+      :markdown
+        * [Speakers](#speakers)
+        * [Tickets](#tickets)
+        * [About GM](#about)
+        * [Details & FAQ](#faq)
+        * [Contact](#contact)
+
+    .social
+      FB/Twitter
+
+/ == Content section =========================================================
+%section
+  %hgroup
+    %h2
+      About Graphika Manila
+  .display
+    %div
+      %nav
+        :markdown
+          * [How it started](#how-it-started)
+          * [Past speakers](#past-speakers)
+
+      .content.card#how-it-started
+        :markdown
+          __Graphika Manila Interational Multimedia Conference__ is the premiere
+          multimedia and graphic design event in the Philippines.  Since 2006,
+          Graphika Manila has attracted over 7,500 design students and
+          professionals and is now hailed as one of the most influential
+          multimedia events in the country.
