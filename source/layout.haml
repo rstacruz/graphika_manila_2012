@@ -1,0 +1,19 @@
+!!! 5
+%html
+  %head
+    %meta(charset='UTF-8')
+    %meta{name: 'language', content: 'en'}
+
+    = ie_edge_tag
+
+    = stylesheet_link_tag "site"
+    = javascript_include_tag "site"
+
+    = ios_hide_address_bar_script
+    = webfonts google: { families: [ 'Exo:100,400,700', 'Armata:400' ] }
+    -# = google_analytics 'UA-29493571-1'
+
+    = yield_content :head
+
+  %body
+    = yield

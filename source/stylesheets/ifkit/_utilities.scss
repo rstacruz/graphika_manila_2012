@@ -1,0 +1,117 @@
+// Ifkit / http://ricostacruz.com/ifkit
+// ------------------------------------
+
+//@[Group] Utilities
+//
+
+@import 'compass/css3';
+
+//@[Mixin] if-gradient($top, $bottom)
+// Works like `linear-gradient`, but assumes that it's always vertical and has
+// a `background-color` fallback.
+//
+@mixin if-gradient($top, $bottom) {
+  background-color: $top;
+  @include background(linear-gradient(top, $top, $bottom)); }
+
+//@[Mixin] if-clearfix
+// Cross-browser PIE clear fix.
+//
+@mixin if-clearfix {
+  & {
+    zoom: 1; }
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+    line-height: 0;
+    height: 0;
+    visibility: hidden;
+    zoom: 1; }
+}
+
+//@[Mixin] if-non-list([ $ul: block, $li: inline ])
+//
+// Resets a `<ul>`s styles. If either `$ul` or `$li` are given,
+// their respective elements will get that as a display property.
+//
+@mixin if-non-list($ul: block, $li: inline) {
+  &, >li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+
+  & {
+    display: $ul; }
+
+  >li {
+    display: $li;
+    background-image: none; } }
+
+//@[Mixin] if-horiz-list
+//
+//     # CSS
+//     ul.non-list {
+//       @include if-non-list;
+//
+//       & {
+//         background: #555;
+//         color: #fff;
+//         padding: 5px; }
+//
+//       >li {
+//         padding: 0 10px; } }
+//
+//     # HAML
+//     %ul.non-list
+//       %li Home
+//       %li About
+//       %li Contact
+//
+// Resets a `<ul>`s styles to make it's `<li>`s lay out horizontally. Perfect
+// for horizontal menus.
+//
+@mixin if-horiz-list($ul-display: block, $li-display: inline) {
+  @include if-non-list($ul-display, $li-display);
+  @include if-clearfix;
+  >li { float: left; }
+}
+
+//@[Mixin] if-center-list
+//
+//     # CSS
+//     div.centered-list {
+//       background: #555;
+//       color: #fff;
+//       padding: 5px;
+//       overflow: hidden;
+//
+//       ul {
+//         @include if-center-list; }
+//
+//       ul>li {
+//         padding: 0 10px; } }
+//
+//     # HAML
+//     .centered-list
+//       %ul
+//         %li Home
+//         %li About
+//         %li Contact
+//
+// Works like `if-horiz-list`, but centers the list items. Perfect for
+// horizontal menus that are centered.  Be sure to `overflow: hidden` the
+// container!
+//
+@mixin if-center-list {
+  @include if-non-list;
+  position: relative; left: 50%; float: left;
+  >li { position: relative; right: 50%; float: left; }
+}
+
+//@[Mixin] if-ellipsis
+// Truncates text using ellipses. Only works in Webkit and Opera.
+@mixin if-ellipsis {
+  text-overflow: ellipsis; text-wrap: none; word-wrap: none;
+  overflow: hidden; white-space: nowrap; -o-text-overflow: ellipsis;
+}
