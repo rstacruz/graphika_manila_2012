@@ -9,13 +9,14 @@
 // Dimensions
 $page-width: 1024px          // Full page width
 $left-column: 225px          // The left side with the logo
+$nav-column: 160px           // Little section navigations
 $nav-height: 36px
 
 // Color swatches
 $bg: #fff
 
 // Text swatches
-$txt: #404040                // Text color
+$txt: #585858                // Text color
 
 /* == Basic reset ============================================================= */
 
@@ -62,6 +63,15 @@ $txt: #404040                // Text color
 
 .content
   +if-content
+  +if-no-boundary-margins
+
+  strong, h2, h3, h4
+    font-family: exo, sans-serif
+    font-weight: 700
+    letter-spacing: 1px
+    color: #333
+    text-transform: uppercase
+    font-size: 1.2em
 
 /* == Base styles ============================================================= */
 
@@ -85,7 +95,8 @@ a
 /* == Logo ==================================================================== */
 
 #logo
-  +if-absolute(0, 0, auto, 0)
+  +if-position(0, 0, auto, 0, $position: fixed)
+  z-index: 5
 
   > div
     @extend %page
@@ -97,16 +108,24 @@ a
     height: 79px
     overflow: hidden
 
+  // Dark and light
   a > div
     +if-absolute(0, auto, auto, 0)
+    overflow: hidden
 
-  a .dark
-    display: none
+  a .black
+    z-index: 1
+
+  a .white
+    z-index: 10
 
 /* == Main introduction ======================================================= */
 
 header.intro
   background: #111
+
+  position: relative
+  z-index: 2
 
   >div
     @extend %page
@@ -156,9 +175,12 @@ header.intro
       background: rgba(white, 0.05)
 
 /* == Main navigation ========================================================= */
+
 nav.main
   &
     margin-top: -$nav-height
+    position: relative
+    z-index: 5
 
   > div
     @extend %page
@@ -239,5 +261,37 @@ section
     background: #eee
     padding: 30px 0
 
+    position: relative
+    z-index: 10
+
     > div
       @extend %page
+      padding-left: $left-column
+    
+  // navigation
+  nav
+    float: left
+    margin-left: -$nav-column
+    width: $nav-column - 20px
+    +box-sizing(border-box)
+    padding: 20px 0
+    background: black
+
+    a
+      display: block
+      padding: 6px 20px
+      +transition(background-color 100ms linear)
+
+    a:hover
+      background: rgba(white, 0.1)
+
+    li a:last-child
+      border-bottom: 0
+
+  // Card content
+  .card
+    line-height: 1.6
+    background: white
+    padding: 30px
+    +box-sizing(border-box)
+    width: 530px

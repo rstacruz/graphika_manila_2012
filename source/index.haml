@@ -2,9 +2,9 @@
 #logo
   %div
     %a{href: '#'}
-      .light
+      .white
         = image_tag 'sprite/logo-white.png', alt: 'Graphika Manila'
-      .dark
+      .black
         = image_tag 'sprite/logo-black.png', alt: 'Graphika Manila'
 
 
@@ -58,3 +58,39 @@
           Graphika Manila has attracted over 7,500 design students and
           professionals and is now hailed as one of the most influential
           multimedia events in the country.
+
+          As it celebrates its seventh year running, Graphika Manila once more
+          brings together Manila's creative minds to listen to inspiring
+          stories and celebrate the works of the best multimedia and graphic
+          designers from the Philippines and from around the globe.
+
+          Simply put it as a creative symposium with speakers from different
+          fields of the creative arts. The conference focuses on the creative
+          side of design rather than technology.
+
+/ == Content section =========================================================
+%section.tickets
+  %hgroup
+    %h2
+      GM2012 Tickets
+  .display
+    %div
+      %nav
+        :markdown
+          * [How it started](#how-it-started)
+          * [Past speakers](#past-speakers)
+
+      .content.card#how-it-started
+        :markdown
+          ### Each Graphika Manila Ticket includes:
+
+          * Admission to the full-day conference
+          * Conference kit which includes the Graphika Manila 2012 book
+          * E-certificate of attendance
+
+          ### Important reminders:
+
+          * Both Conference & student passes have the same priviledges.
+          * Food/lunch not included in the ticket price.
+          * Seats are on a first-come, first-served basis only.
+          * Students are required to present a valid ID upon entry.
