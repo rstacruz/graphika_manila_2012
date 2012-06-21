@@ -6,7 +6,7 @@ $(window).on 'resize', -> $('header.intro').height $(window).height()
 $ -> $(window).trigger 'resize'
 
 # Scrollstick
-$ -> $("nav.main").scrollstick zIndex: 5
+$ -> $("nav.main").scrollstick zIndex: 11
 
 # Anchorjump
 $ -> $('body').anchorjump for: "[href^='#']", offset: -180
@@ -18,7 +18,7 @@ $ ->
   $black = $logo.find('.black').show()
 
   $(window).on 'scroll', ->
-    threshold_max  = $('header.intro').height() - 30 - 5
+    threshold_max  = $('header.intro').height() - 20 - 5
     logo_height    = $logo.height()
     threshold_min  = threshold_max - logo_height
 
