@@ -1,9 +1,11 @@
-# Dynamically resize the header.
-$(window).on 'resize', ->
-  $('header.intro').height $(window).height()
+#= require jquery.scrollstick
 
-$ ->
-  $(window).trigger 'resize'
+# Dynamically resize the header.
+$(window).on 'resize', -> $('header.intro').height $(window).height()
+$ -> $(window).trigger 'resize'
+
+# Scrollstick
+$ -> $("nav.main").scrollstick zIndex: 5
 
 # Logo magic
 $ ->

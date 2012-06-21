@@ -114,7 +114,7 @@ a
     overflow: hidden
 
   a .black
-    z-index: 1
+    z-index: 9
 
   a .white
     z-index: 10
@@ -176,15 +176,18 @@ header.intro
 
 /* == Main navigation ========================================================= */
 
+.intro + .main
+  margin-top: -$nav-height - 33px
+
 nav.main
   &
-    margin-top: -$nav-height
     position: relative
     z-index: 5
+    padding-top: 33px
 
   > div
     @extend %page
-    padding-left: $left-column
+    padding-left: $left-column - 20px
 
   // Lineheights
   a, &
@@ -224,10 +227,10 @@ nav.main
     background-color: #eee
 
   // Caps
-  .primary li:first-child a
-    padding-left: 30px
-  .primary li:last-child a
-    padding-right: 30px
+  // .primary li:first-child a
+  //   padding-left: 30px
+  // .primary li:last-child a
+  //   padding-right: 30px
 
 /* == Sections ================================================================ */
 section
@@ -245,6 +248,10 @@ section
       color: #aaa
       font-size: 32pt
       text-shadow: 2px 2px 0 rgba(black, 0.08)
+
+      // background: $bg
+      // position: relative
+      // z-index: 6
 
     // The notch
     &:before
