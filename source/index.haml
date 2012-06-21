@@ -1,3 +1,8 @@
+- content_for :head do
+  %title Graphika Manila 2012
+  %meta{name: 'description', content: 'Graphika Manila Interational Multimedia Conference_is the premiere multimedia and graphic design event in the Philippines.'}
+  %meta{name: 'og:image', content: 'http://www.graphikamanila.com/images/preview.jpg'}
+
 / == Introduction ============================================================
 #logo
   %div
@@ -93,7 +98,7 @@
             * [How it started](#how-it-started)
             * [Past speakers](#past-speakers)
 
-    .tab#how-it-started{style: 'background: url(/images/gm09.jpg) center center repeat'}
+    .tab#how-it-started{style: "background: url(#{image_path 'gm09.jpg'}) center center repeat"}
       .area
         .content.card
           :markdown
