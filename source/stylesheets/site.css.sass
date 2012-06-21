@@ -183,6 +183,25 @@ header.intro
       +border-radius(2px)
       background: rgba(white, 0.05)
 
+  // Button
+  .actions
+    padding-top: 120px
+
+    a.button
+      background-color: #ddd
+      display: inline-block
+      padding: 12px 20px
+      color: $txt
+      @extend %exo-700-caps
+      font-size: 1.1em
+      +transition(all 300ms ease)
+      border: solid 6px #ddd
+
+      &:hover
+        background-color: #fff
+        border-color: #aaa
+
+
 /* == Main navigation ========================================================= */
 
 .intro + .main
