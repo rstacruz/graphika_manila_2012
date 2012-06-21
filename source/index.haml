@@ -40,57 +40,72 @@
       -# FB/Twitter goes here
 
 / == Content section =========================================================
-%section
-  %hgroup
-    %h2
-      About Graphika Manila
-  .display
-    %div
-      %nav
-        :markdown
-          * [How it started](#how-it-started)
-          * [Past speakers](#past-speakers)
 
-      .content.card#how-it-started
-        :markdown
-          __Graphika Manila Interational Multimedia Conference__ is the premiere
-          multimedia and graphic design event in the Philippines.  Since 2006,
-          Graphika Manila has attracted over 7,500 design students and
-          professionals and is now hailed as one of the most influential
-          multimedia events in the country.
-
-          As it celebrates its seventh year running, Graphika Manila once more
-          brings together Manila's creative minds to listen to inspiring
-          stories and celebrate the works of the best multimedia and graphic
-          designers from the Philippines and from around the globe.
-
-          Simply put it as a creative symposium with speakers from different
-          fields of the creative arts. The conference focuses on the creative
-          side of design rather than technology.
-
-/ == Content section =========================================================
 %section.tickets
   %hgroup
     %h2
       GM2012 Tickets
+
   .display
-    %div
-      %nav
-        :markdown
-          * [How it started](#how-it-started)
-          * [Past speakers](#past-speakers)
+    .area
+      %aside
+        %h3 3 ways to purchase tickets
 
-      .content.card#how-it-started
-        :markdown
-          ### Each Graphika Manila Ticket includes:
+        %nav.lite
+          :markdown
+            * [How it started](#how-it-started)
+            * [Past speakers](#past-speakers)
 
-          * Admission to the full-day conference
-          * Conference kit which includes the Graphika Manila 2012 book
-          * E-certificate of attendance
+    .tab#tickets
+      .area
+        .content.card-lite
+          :markdown
+            ### Each Graphika Manila Ticket includes:
 
-          ### Important reminders:
+            * Admission to the full-day conference
+            * Conference kit which includes the Graphika Manila 2012 book
+            * E-certificate of attendance
 
-          * Both Conference & student passes have the same priviledges.
-          * Food/lunch not included in the ticket price.
-          * Seats are on a first-come, first-served basis only.
-          * Students are required to present a valid ID upon entry.
+            ### Important reminders:
+
+            * Both Conference & student passes have the same priviledges.
+            * Food/lunch not included in the ticket price.
+            * Seats are on a first-come, first-served basis only.
+            * Students are required to present a valid ID upon entry.
+
+/ == Content section =========================================================
+
+%section
+  %hgroup
+    %h2
+      About Graphika Manila
+
+  -# Display = The full thingie.
+  -# Area = just the part that has content
+  .display
+    .area
+      %aside
+        %nav
+          :markdown
+            * [How it started](#how-it-started)
+            * [Past speakers](#past-speakers)
+
+    .tab#how-it-started{style: 'background: url(/images/gm09.jpg) center center repeat'}
+      .area
+        .content.card
+          :markdown
+            __Graphika Manila Interational Multimedia Conference__ is the premiere
+            multimedia and graphic design event in the Philippines.  Since 2006,
+            Graphika Manila has attracted over 7,500 design students and
+            professionals and is now hailed as one of the most influential
+            multimedia events in the country.
+
+            As it celebrates its seventh year running, Graphika Manila once more
+            brings together Manila's creative minds to listen to inspiring
+            stories and celebrate the works of the best multimedia and graphic
+            designers from the Philippines and from around the globe.
+
+            Simply put it as a creative symposium with speakers from different
+            fields of the creative arts. The conference focuses on the creative
+            side of design rather than technology.
+

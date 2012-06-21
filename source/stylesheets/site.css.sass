@@ -64,6 +64,7 @@ $txt: #585858                // Text color
 .content
   +if-content
   +if-no-boundary-margins
+  line-height: 1.6
 
   strong, h2, h3, h4
     font-family: exo, sans-serif
@@ -122,14 +123,23 @@ a
 /* == Main introduction ======================================================= */
 
 header.intro
-  background: #111
+  background: #111 url(/images/bg.jpg)
+  background-size: 100% auto
+  background-attachment: fixed
 
   position: relative
   z-index: 2
+  overflow: hidden
+
+  >img
+    +if-position(0, auto, auto, 0, $position: fixed)
+    width: 100%
 
   >div
     @extend %page
     padding: 40px 0 100px $left-column
+    position: relative
+    z-index: 1
 
   // Text stuff
   &
@@ -148,7 +158,6 @@ header.intro
 
     p
       margin-bottom: 20px
-
 
   // Speakers list
   .speakers
@@ -233,8 +242,12 @@ nav.main
   //   padding-right: 30px
 
 /* == Sections ================================================================ */
+
 section
-  margin: 80px 0
+  padding: 60px 0
+  position: relative
+  // background: $bg
+  // z-index: 2
 
   // The heading
   > hgroup
@@ -264,25 +277,45 @@ section
       +border-radius(2px)
 
   // Display area
-  > .display
-    background: #eee
-    padding: 30px 0
+  .display
+    +box-shadow(inset 0 20px 10px -10px rgba(black, 0.05))
+    background: $bg
 
     position: relative
+    z-index: 100
+
+  .area
+    @extend %page
+    padding-left: $left-column
+    position: relative
+
+  .tab .area
+    padding: 30px 0 30px $left-column
+
+  // Sidebar of display area
+  aside
+    position: absolute
+    left: 0
+    top: 0
+    width: $left-column - 30px
     z-index: 10
 
-    > div
-      @extend %page
-      padding-left: $left-column
-    
-  // navigation
-  nav
-    float: left
-    margin-left: -$nav-column
-    width: $nav-column - 20px
+  aside > *
+    margin-bottom: 30px
     +box-sizing(border-box)
     padding: 20px 0
-    background: black
+
+  aside > h3
+    background: #111
+    padding: 20px
+    color: white
+    @extend %exo-700-caps
+    font-size: 12pt
+    line-height: 1.4
+
+  // Navigation thingie
+  aside nav
+    background: #111
 
     a
       display: block
@@ -295,10 +328,17 @@ section
     li a:last-child
       border-bottom: 0
 
+  // Nav lite
+  aside nav.lite
+    background: rgba(white, 0.8)
+
   // Card content
   .card
-    line-height: 1.6
     background: white
     padding: 30px
-    +box-sizing(border-box)
     width: 530px
+
+  .card-lite
+    padding: 30px 0
+    width: 530px
+    +box-sizing(border-box)
