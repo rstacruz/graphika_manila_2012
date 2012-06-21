@@ -1,11 +1,15 @@
 #= require jquery.scrollstick
-
+#= require jquery.anchorjump
+#
 # Dynamically resize the header.
 $(window).on 'resize', -> $('header.intro').height $(window).height()
 $ -> $(window).trigger 'resize'
 
 # Scrollstick
 $ -> $("nav.main").scrollstick zIndex: 5
+
+# Anchorjump
+$ -> $('body').anchorjump for: "[href^='#']", offset: -180
 
 # Logo magic
 $ ->
@@ -26,3 +30,4 @@ $ ->
 
     # Update clipping regions.
     $white.css height: (logo_height - y)
+
