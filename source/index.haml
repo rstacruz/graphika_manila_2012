@@ -84,6 +84,21 @@
       %strong
       %small Seconds
 
+%section.news#news
+  %div
+    %h2 Tweets
+    #tweet
+    %script{src: "http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js"}
+    :javascript
+      getTwitters('tweet', {
+        id: 'graphikamanila',
+        count: 4,
+        enableLinks: true,
+        ignoreReplies: true,
+        clearContents: true,
+        template: '<a class="perm" href="http://twitter.com/%user_screen_name%/statuses/%id_str%/">%time%</a><br>%text%'
+      });
+
 / == Content section =========================================================
 %section.speakers.anchor
   %hgroup
