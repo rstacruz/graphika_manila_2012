@@ -30,6 +30,7 @@ $ ->
 
     # Update clipping regions.
     $white.css height: (logo_height - y)
+    null
 
 # Tab switcheroo
 $ ->
@@ -40,6 +41,11 @@ $ ->
 
     $current.fadeOut 300, -> $next.fadeIn 300
 
+    $(".active[href^='#']").removeClass 'active'
+    $("a[href='#{href}']").addClass 'active'
+    null
+
+# Autojump
 $ ->
   if location.hash
     $.anchorjump location.hash, offset: -64, parent: '.anchor'
