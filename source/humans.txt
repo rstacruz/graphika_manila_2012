@@ -7,3 +7,6 @@
       /__/   2  0  1  2     Development by Nadarei (nadarei.co)
                             twitter: @rstacruz / www: ricostacruz.com
                             www: michaelgalero.com
+
+View this site's real source code here:
+https://github.com/rstacruz/graphika_manila_2012
