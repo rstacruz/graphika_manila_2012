@@ -274,7 +274,7 @@ nav.main
     position: relative
     z-index: 5
     padding-top: $nav-offset
-    pointer-events: visible
+    pointer-events: none
 
   > div
     @extend %page
@@ -293,6 +293,7 @@ nav.main
     background: $menu-bg
     overflow: hidden
     float: left
+    pointer-events: all
 
   li, a
     display: block
@@ -674,7 +675,7 @@ section
   0%
     background-position: 0 0
   100%
-    background-position: -1000px 0
+    background-position: -1200px 0
 
 
 .speakers .tab
