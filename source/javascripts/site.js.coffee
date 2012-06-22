@@ -55,9 +55,9 @@ $ ->
     null
 
 # Autojump
-$ ->
+$(window).on 'load', ->
   if location.hash
-    $.anchorjump location.hash, offset: -64, parent: '.anchor'
+    delay 0, -> $.anchorjump location.hash, offset: -64, parent: '.anchor'
 
 # Countdown
 $ ->
