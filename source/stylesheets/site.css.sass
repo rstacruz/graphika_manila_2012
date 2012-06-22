@@ -379,7 +379,7 @@ section
   aside
     position: absolute
     left: 0
-    top: 0
+    top: -20px
     width: $left-column - 30px
     z-index: 1
 
@@ -439,6 +439,9 @@ section
 
 /* Tickets sidebar */
 .tickets aside
+  &
+    top: 0
+
   h3
     margin-top: 30px
     margin-bottom: 20px
@@ -502,8 +505,9 @@ section
     margin-top: 0
     width: $card-width
 
-  h3
+  h2, h3
     font-size: 1.5em
+    text-transform: none
 
   ul, li
     margin: 0
