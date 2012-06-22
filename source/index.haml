@@ -50,7 +50,7 @@
         * [Speakers](#speakers)
         * [Tickets](#tickets)
         * [About GM](#about)
-        * [Details & FAQ](#faq)
+        * [Info & FAQ](#info)
         * [Contact](#contact)
 
 / == It's the final countdown! ===============================================
@@ -265,7 +265,7 @@
 
               Necessitatibus in dolor quasi consequuntur voluptatibus. Dolor quibusdam ullam delectus rerum ex. Ut non autem fuga minima. Et explicabo beatae sunt aut.
 
-/ == Content section =========================================================
+/ == Content: Tickets ========================================================
 
 %section.tickets.anchor
   %hgroup
@@ -388,7 +388,7 @@
 
 / == Content section: About us ===============================================
 
-%section
+%section.anchor.about
   %hgroup
     %h2
       About Graphika Manila
@@ -400,10 +400,10 @@
       %aside
         %nav
           :markdown
-            * [How it started](#how-it-started)
+            * [About GM](#about)
             * [Past speakers](#past-speakers)
 
-    .tab#how-it-started{style: "background: url(#{image_path 'gm11.jpg'}) center center repeat"}
+    .tab#about{style: "background: url(#{image_path 'gm11.jpg'}) center center repeat"}
       .area
         .content.card
           :markdown
@@ -421,6 +421,77 @@
             Simply put it as a creative symposium with speakers from different
             fields of the creative arts. The conference focuses on the creative
             side of design rather than technology.
+
+    .tab.hide#past-speakers{style: "background: url(#{image_path 'gm11.jpg'}) center center repeat"}
+      .area
+        .content.card
+          :markdown
+            Laudantium architecto cumque deleniti sapiente reprehenderit
+            possimus. Temporibus quae labore sint nobis aut quam dolores. Ea
+            numquam sint sunt. Id facere sed et eos doloribus blanditiis quis.
+            Sit eius qui et iure qui illum eveniet.
+
+            A ullam et eos. Ut dolores quia a aut et consectetur. Architecto at
+            et eaque et labore nihil asperiores. Quia molestias et incidunt
+            quia odit voluptatem repudiandae. Voluptates est eius culpa aut.
+
+/ == Content: FAQ ========================================================
+
+%section.faq.anchor
+  %hgroup
+    %h2
+      Info & FAQ
+
+  .display
+    .area
+      %aside
+        %nav
+          :markdown
+            * [Info](#info)
+            * [FAQ](#faq)
+
+    .tab#info
+      .area
+        .content.side.map
+          = google_map "https://maps.google.com/maps?q=SMX+Convention+Center,+Marina+Way,+Pasay,+Metro+Manila,+Philippines&hl=en&sll=37.0625,-95.677068&sspn=47.167389,91.318359&oq=smx+con&hq=SMX+Convention+Center,+Marina+Way,&hnear=Pasay,+Metro+Manila,+Philippines&t=m&z=15", width: 350, height: 180
+
+        .content.slim
+          %a{href: 'http://www.flickr.com/photos/acullador/2064561929/lightbox/'}
+            = image_tag 'smx.jpg', alt: "SMX Convention Center"
+
+          :markdown
+            ## August 11, 2012 (Saturday)
+
+            * Registration begins at 9:00 AM
+            * Event starts at 10:00 AM
+            * and ends at 5:00PM
+
+            ### SMX Convention Center
+
+            * Function rooms 1-4
+            * SM Mall of Asia, Bay City, Pasay City, Metro Manila
+
+    .tab.hide#faq
+      .area
+        .content.full
+          :markdown
+            * __I'm not a designer or artist, could I still attend Graphika Manila?__
+            YES! By all means. If you are creative at heart, passionate about design or are one who appreciates the arts, you are very welcome to attend Graphika Manila.
+
+            * __I'm a designer or artist, what is the best way to support Graphika Manila?__
+            One of the best ways to support Graphika Manila is to actually purchase a ticket and attend the event. Your purchase will go a long way to help Graphika Manila become better in many ways.
+
+            * __Do you accept credit card payments?__
+            Unfortunately, no. Our ticket partners only accept cash payments. Cash and check payments are accepted through bank deposit.
+
+            * __Does pre-registration guarantee me a seat to the conference?__
+            No. We request pre-registration from attendees so that they may receive more information about Graphika Manila. Pre-registration is NOT REQUIRED and DOES NOT guarantee a ticket or admission to the event.
+
+            * __What will my purchase of a Graphika Manila ticket be inclusive of?__
+            Each purchase of a Graphika Manila ticket includes admission to the full-day conference, a conference kit, an e-certificate of attendance, and the Graphika Manila 2011 Book. It does NOT include food for the conference, which will be on the attendee's account.
+
+            * __Is there a guaranteed seating arrangement?__
+            As much as we'd like to, there is no guaranteed seating arrangement because we have multiple ticketing partners that keep us from assigning seats. Seats are on a first-come, first-served basis only.
 
 / == Content section: contact us =============================================
 

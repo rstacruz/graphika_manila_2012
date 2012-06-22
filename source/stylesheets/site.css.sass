@@ -95,6 +95,7 @@ $snap-out: cubic-bezier(.85,.85,.15,.95)
   +if-content
   +if-no-boundary-margins
   line-height: 1.6
+  padding-top: 30px
 
   strong, h2, h3, h4
     font-family: exo, sans-serif
@@ -439,7 +440,12 @@ section
     padding: 0 30px 60px 30px
     width: $card-width
 
+  .full
+    width: auto
+    padding: 30px 30px 60px 30px
+
   .slim
+    padding: 30px 30px 60px 30px
     width: $card-width
     +box-sizing(border-box)
 
@@ -505,11 +511,6 @@ section
 
 .tickets .tab
   min-height: 500px
-
-.tickets .tab .area
-  padding-top: 30px
-  padding-left: $left-column
-
 
 /* Tickets content area */
 #tickets .content
@@ -874,3 +875,52 @@ body
 
       @extend %armata-700-caps
       color: #aaa
+
+/* == Info ==================================================================== */
+
+#info
+  .side img
+    width: 350px
+    height: 180px
+
+  .slim
+    img
+      width: $card-width + 30px
+      height: 180px
+      background: $line
+
+    h2
+      text-transform: none
+
+    ul, li
+      margin: 0
+      padding: 0
+      list-style-type: none
+
+/* == FAQ ===================================================================== */
+#faq
+  ul
+    @extend %clearfix
+
+  ul, li
+    margin: 0
+    padding: 0
+    list-style-type: none
+
+  li
+    padding: 20px 0
+    border-top: dotted 1px $line
+    +box-sizing(border-box)
+    float: left
+    width: 50%
+    padding-right: 30px
+
+  li:first-child, li:first-child + li
+    border-top: 0
+    padding-top: 0
+
+  li strong
+    font-size: 1.1em
+    display: block
+
+
