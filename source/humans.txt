@@ -7,9 +7,11 @@
       /__/   2  0  1  2     Development by Nadarei (nadarei.co)
                             twitter: @rstacruz / www: ricostacruz.com
                             www: michaelgalero.com
-_____
 
-  *  Built using Sass, HAML and CoffeeScript (via Middleman).
-     View this site's real source code here:
- ,---'
- '-> https://github.com/rstacruz/graphika_manila_2012
+________________________________________________________________________
+
+
+ -,  Built using Sass, HAML and CoffeeScript (via Middleman).
+  |  View this site's real source code here:
+,-'
+'- > https://github.com/rstacruz/graphika_manila_2012

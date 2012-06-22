@@ -53,15 +53,18 @@
     options = $.extend({}, defaults, options);
 
     var $area = $(href);
-    // Find the parent
-    if (options.parent) {
-      var $parent = $area.closest(options.parent);
-      if ($parent.length) { $area = $parent; }
+    var top = 0;
+
+    if (href != '#') {
+      // Find the parent
+      if (options.parent) {
+        var $parent = $area.closest(options.parent);
+        if ($parent.length) { $area = $parent; }
+      }
+      if (!$area.length) { return; }
     }
 
-    if (!$area.length) { return; }
-
-    $('body').animate({ scrollTop: $area.offset().top + options.offset }, options.speed);
+    $('body').animate({ scrollTop: top }, options.speed);
     $('body').trigger('anchor', href);
 
     // Add the location hash via pushState.
