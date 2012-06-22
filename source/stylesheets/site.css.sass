@@ -536,14 +536,18 @@ section
 
   li
     border-bottom: dotted 1px $line
-    padding: 5px 0
+    padding: 9px 0
 
 /* Conference pass */
 #tickets .conference-pass
   @extend %list-reset
+  width: 400px
 
   ul
+    margin-top: 0
     @extend %clearfix
+    border: 0
+    margin-bottom: 20px
 
   li strong, li em
     display: block
@@ -561,19 +565,23 @@ section
     @extend %armata-700-caps
 
   li
-    width: 50%
+    width: 33%
     +box-sizing(border-box)
+    border: 0
+    padding-top: 0
     float: left
     line-height: 1.3
 
   li:first-child
-    +box-shadow(inset -1px 0 0 $line)
-    padding-right: 20px
+    width: 33%
+    text-align: right
+    padding-top: 5px
+    font-size: 1.2em
+    color: #aaa
 
-  li:last-child
+  li:first-child + li
     strong
       color: #999
-
     em
       color: #aaa
 
