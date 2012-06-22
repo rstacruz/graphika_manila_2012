@@ -905,20 +905,76 @@ body
 /* == Info ==================================================================== */
 
 #info
-  .side img
-    width: 350px
-    height: 180px
+  @extend %list-reset
 
-  .slim
+  .full
+    @extend %clearfix
+
+  .hero
+    background: $line
+    height: 180px
+    overflow: hidden
+
     img
       width: $card-width + 30px
       height: 180px
       background: $line
 
-    h2
-      text-transform: none
+    .left
+      float: left
+    .right
+      float: right
 
-    @extend %list-reset
+  // Heading
+  h2
+    margin-top: 20px
+    margin-bottom: 20px
+    padding-bottom: 20px
+    border-bottom: solid 1px $line
+
+    @extend %armata-700-caps
+    text-transform: none
+    font-size: 1.8em
+
+  // Items
+  .date, ul
+    float: left
+    +box-sizing(border-box)
+    padding-right: 20px
+
+  ul
+    width: 35%
+
+  .date
+    width: 30%
+
+  .date
+    .weekday, .month
+      display: block
+      @extend exo-700
+      font-weight: bold
+
+    .weekday
+      font-size: 1.8em
+      letter-spacing: -1px
+      color: $black
+
+    .month
+      font-size: 1.2em
+      text-transform: uppercase
+
+    .day
+      float: left
+      margin-left: -120px
+      width: 120px
+      text-align: center
+
+      font-size: 44pt
+
+      line-height: 1
+
+    ul strong
+      display: inline
 
 /* == FAQ ===================================================================== */
 

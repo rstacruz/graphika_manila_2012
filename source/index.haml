@@ -483,24 +483,31 @@
 
     .tab#info
       .area
-        .content.side.map
-          = google_map "https://maps.google.com/maps?q=SMX+Convention+Center,+Marina+Way,+Pasay,+Metro+Manila,+Philippines&hl=en&sll=37.0625,-95.677068&sspn=47.167389,91.318359&oq=smx+con&hq=SMX+Convention+Center,+Marina+Way,&hnear=Pasay,+Metro+Manila,+Philippines&t=m&z=15", width: 350, height: 180
+        .content.full
+          .hero
+            .left
+              %a{href: 'http://www.flickr.com/photos/acullador/2064561929/lightbox/'}
+                = image_tag 'smx.jpg', alt: "SMX Convention Center"
+            .right
+              = google_map "https://maps.google.com/maps?q=SMX+Convention+Center,+Marina+Way,+Pasay,+Metro+Manila,+Philippines&hl=en&sll=37.0625,-95.677068&sspn=47.167389,91.318359&oq=smx+con&hq=SMX+Convention+Center,+Marina+Way,&hnear=Pasay,+Metro+Manila,+Philippines&t=m&z=15", width: 350, height: 180
 
-        .content.slim
-          %a{href: 'http://www.flickr.com/photos/acullador/2064561929/lightbox/'}
-            = image_tag 'smx.jpg', alt: "SMX Convention Center"
+          .info
+            %h2 Let's get this party started.
 
-          :markdown
-            ## August 11, 2012 (Saturday)
+            .date
+              %strong.day 11
+              %span.weekday Saturday
+              %span.month August 11, 2012
 
-            * Registration begins at 9:00 AM
-            * Event starts at 10:00 AM
-            * and ends at 5:00PM
+            :markdown
+              * __Registration at 9:00 AM__
+              * Event starts at 10:00 AM
+              * and ends at 5:00PM
 
-            ### SMX Convention Center
-
-            * Function rooms 1-4
-            * SM Mall of Asia, Bay City, Pasay City, Metro Manila
+            :markdown
+              * __SMX Convention Center__
+              * Function rooms 1-4
+              * SM Mall of Asia, Bay City, Pasay, MM
 
     .tab.hide#faq
       .area
