@@ -12,7 +12,7 @@ $left-column: 225px          // The left side with the logo
 $nav-column: 160px           // Little section navigations
 $nav-height: 36px
 $nav-offset: 70px
-$card-width: 510px
+$card-width: 420px
 
 // Color swatches
 $bg: #fff
@@ -83,6 +83,12 @@ $txt: #585858                // Text color
     font-family: exo, sans-serif
     font-weight: 700
     letter-spacing: 1px
+
+  blockquote
+    background: #fafafa
+    border-bottom: solid 1px #ddd
+    border-right: solid 1px #ddd
+    padding: 20px
 
 /* == Base styles ============================================================= */
 
@@ -403,6 +409,10 @@ section
     width: $card-width
     +box-sizing(border-box)
 
+  .side
+    width: 350px
+    float: right
+
 /* == Content: Tickets ======================================================== */
 
 // Sidebar
@@ -454,14 +464,14 @@ section
 
     strong
       color: #fff
-      border-bottom-color: #222
+      // border-bottom-color: #222
 
 .tickets .tab
   min-height: 500px
 
 // Content area
 #tickets .content
-  &
+  &.slim
     margin-top: 0
     width: $card-width
 
