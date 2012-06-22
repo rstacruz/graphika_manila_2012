@@ -943,4 +943,41 @@ body
     font-size: 1.1em
     display: block
 
+/* == Direct purchase ========================================================= */
+
+#direct-purchase
+  .full
+    @extend %clearfix
+
+  article
+    padding-top: 15px
+    padding-right: 20px
+    padding-bottom: 20px
+    float: left
+    +box-sizing(border-box)
+    width: 33%
+
+    img
+      height: 65px
+
+    h3
+      font-size: 1.6em
+      @extend %armata-700-caps
+      margin-bottom: 0
+
+    h4
+      text-transform: none
+      @extend %armata-700
+      margin-top: 0
+
+  .partners, .schools
+    overflow: hidden
+
+  .schools
+    margin-top: 30px
+    border-top: dotted 1px $line
+    padding-top: 20px
+
+  @extend %list-reset
+
 

@@ -280,7 +280,7 @@
 
           * [__Direct purchase__ via ticket partners](#direct-purchase)
           * [__Bank deposit__ via BDO account](#bank-deposit)
-          * [__Buy tickets online__ PayPal or credit card](#buy-online)
+          * [__Buy tickets online__ PayPal or credit card](http://store.graphikamanila.com/)
 
     .tab#tickets
       .area
@@ -316,58 +316,73 @@
 
     .tab#direct-purchase.hide
       .area
-        .content.slim
-          :markdown
-            ## Ticket partners
+        .content.full
+          .partners
+            %article
+              = image_tag 'digital-walker.jpg', alt: 'Digital Walker'
+              :markdown
+                ### Makati
+                #### Digital Walker - Parksquare 1
+                
+                Ground Floor, Parksquare 1,  
+                Ayala Center,  
+                Makati City
+                
+                *Professional & Student Tickets*
+                10:00AM - 8:00PM  
+                Phone: 816-3574
 
-            Ticket can be purchased directly from any of our ticket partners or via bank deposit (details below):
+            %article
+              = image_tag 'crumpler.jpg', alt: 'Crumpler'
+              :markdown
+                ### Ortigas
+                #### Crumpler - SM Megamall
 
-            ### Makati: Digital Walker - Parksquare 1
+                3rd Level, SM Megamall,  
+                Ortigas Center,  
+                Mandaluyong
+                
+                *Professional & Student Tickets*  
+                10:00AM - 9:00PM  
+                Phone: 638-7391
 
-            > Ground Floor, Parksquare 1,  
-            > Ayala Center,  
-            > Makati City
+            %article
+              = image_tag 'crumpler.jpg', alt: 'Crumpler'
+              :markdown
+                ### Quezon City
+                #### Crumpler - Trinoma
 
-            * *Store Hours:* 10:00AM - 8:00PM
-            * *Phone:* 816-3574
-            * *Professional & Student Tickets*
+                3rd Level,  
+                Trinoma Mall, Edsa,  
+                Quezon City
 
-            ### Ortigas: Crumpler - SM Megamall
+                *Professional & Student Tickets*  
+                10:00AM - 9:00PM  
+                Phone: 916-7098
 
-            > 3rd Level,  
-            > SM Megamall,  
-            > Ortigas Center,  
-            > Mandaluyong
+          .schools
+            %article
+              :markdown
+                ## School partners
+                You may contact the following organzations for student tickets.
 
-            * *Store Hours:* 10:00AM - 9:00PM
-            * *Phone:* 638-7391
-            * *Professional & Student Tickets*
+            %article
+              :markdown
+                __Moomedia (De La Salle University)__
 
-            ### QC: Crumpler Trinoma
+                * *Contact:* Iya Del Rio
+                * *Mobile:* (+63916) 551-4113
+                * *Contact:* Lian Castillo
+                * *Mobile:* (+63917) 921-9133
+                * *Student Tickets Only*
 
-            > 3rd Level,  
-            > Trinoma Mall, Edsa,  
-            > Quezon City
+            %article
+              :markdown
+                __Media Max (DLS-CSB)__
 
-            * *Store Hours:* 10:00AM - 9:00PM
-            * *Phone:* 916-7098
-            * *Professional & Student Tickets*
-
-            ### School partners
-
-            __Media Max (DLS-CSB)__
-
-            * *Contact:* Chelsea Delfin
-            * *Mobile:* (+63906) 249-8619
-            * *Student Tickets Only*
-
-            __Moomedia (De La Salle University)__
-
-            * *Contact:* Iya Del Rio
-            * *Mobile:* (+63916) 551-4113
-            * *Contact:* Lian Castillo
-            * *Mobile:* (+63917) 921-9133
-            * *Student Tickets Only*
+                * *Contact:* Chelsea Delfin
+                * *Mobile:* (+63906) 249-8619
+                * *Student Tickets Only*
 
     .tab#bank-deposit.hide
       .area
@@ -428,7 +443,7 @@
             fields of the creative arts. The conference focuses on the creative
             side of design rather than technology.
 
-    .tab.hide#past-speakers{style: "background: url(#{image_path 'gm11.jpg'}) center top repeat"}
+    .tab.hide#past-speakers{style: "background: url(#{image_path 'speakers.jpg'}) center top repeat; background-size: 1400px auto"}
       .area
         .content.card
           :markdown
