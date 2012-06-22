@@ -91,7 +91,7 @@ $ ->
 # Days text rotator
 $ ->
   days = ['days']
-  strings = ['nights', 'mornings', 'dreams']
+  strings = ['nights', 'mornings', 'dreams', 'midnights', 'sunsets', 'evenings']
   isDay = true
 
   # Gets a sample from the given array
