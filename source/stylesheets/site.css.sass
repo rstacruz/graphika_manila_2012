@@ -84,7 +84,7 @@ $snap-out: cubic-bezier(.85,.85,.15,.95)
 
   &.enter
     opacity: 0
-    +transform(translate(0, -$y) perspective(200px) rotateX(90deg) scale($scale))
+    +transform(translate(0, -$y) perspective(200px) rotateX(90deg))
   &.exit
     opacity: 0
     +transform(translate(0, $y) perspective(200px) rotateX(-90deg) scale($scale))
@@ -839,7 +839,7 @@ body
       position: absolute
       left: 0
       top: 0
-      @include flipme($y: 50px)
+      @include flipme($y: 50px, $scale: 0.8)
 
   // Animation
   .box
