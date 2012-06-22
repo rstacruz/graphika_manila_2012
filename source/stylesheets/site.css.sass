@@ -11,9 +11,11 @@ $page-width: 1024px          // Full page width
 $left-column: 225px          // The left side with the logo
 $nav-column: 160px           // Little section navigations
 $nav-height: 36px
+$nav-offset: 70px
 
 // Color swatches
 $bg: #fff
+$line: #ddd
 
 // Text swatches
 $txt: #585858                // Text color
@@ -203,16 +205,16 @@ header.intro
         border-color: #aaa
 
 
-/* == Main navigation ========================================================= */
+/* == Main navigation menu ==================================================== */
 
 .intro + .main
-  margin-top: -$nav-height - 25px
+  margin-top: -$nav-height - $nav-offset
 
 nav.main
   &
     position: relative
     z-index: 5
-    padding-top: 25px
+    padding-top: $nav-offset
 
   > div
     @extend %page
@@ -229,7 +231,6 @@ nav.main
     position: relative
     z-index: 1
     background: $bg
-    +border-top-radius(2px)
     overflow: hidden
 
   .social, .primary
@@ -360,26 +361,29 @@ section
     width: 530px
     +box-sizing(border-box)
 
-/* ==  ======================================================================== */
+/* == Navigation background =================================================== */
 
 nav.screen
   +if-position(0, 0, auto, 0, $position: fixed)
   height: 120px
   background: $bg
   z-index: 2
-  +box-shadow(0 2px 10px rgba(black, 0.1), inset 0 3px 0 #111)
+  +box-shadow(0 2px 10px rgba(black, 0.1), inset 0 3px 0 #111, inset 0 6px $line)
 
   > div
     @extend %page
-    padding-top: 65px
+    padding-top: 30px
     padding-left: $left-column
     line-height: 1.5
 
   p
     color: #aaa
+    font-size: 12pt
+    border-bottom: solid 1px $line
+    padding-bottom: 8px
 
   strong
     @extend %exo-700-caps
-    color: #999
-    margin-right: 10px
+    color: $txt
+    margin-right: 5px
 
