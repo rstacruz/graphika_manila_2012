@@ -1,5 +1,6 @@
 #= require jquery.scrollstick
 #= require jquery.anchorjump
+#= require jquery.countdown
 
 delay = (n, fn) -> setTimeout fn, n
 
@@ -58,3 +59,60 @@ $ ->
   if location.hash
     $.anchorjump location.hash, offset: -64, parent: '.anchor'
 
+# Countdown
+$ ->
+  $('[data-countdown_until]').each ->
+    $this = $(this)
+    sUntil = $this.attr('data-countdown_until')
+
+    if sUntil
+      $this.countdown
+        until: new Date(sUntil)
+        update: (segment, text) ->
+          $el = $this.find(".#{segment}.box")
+          $strong = $el.find('strong')
+
+          $el.queue (next) ->
+            # Move the old one out...
+            $strong.removeClass('enter').addClass('exit')
+            setTimeout (-> $strong.remove()), 500
+
+            # And slide a new one in.
+            $new = $('<strong>')
+              .addClass('enter')
+              .insertBefore($strong)
+              .text(text)
+            setTimeout (-> $new.removeClass('enter')), 0
+
+            setTimeout next, 600
+            null
+
+
+# Days text rotator
+$ ->
+  days = ['days']
+  strings = ['nights', 'mornings', 'dreams']
+  isDay = true
+
+  # Gets a sample from the given array
+  sample = (arr) ->
+    arr[parseInt(Math.random() * arr.length)]
+
+  work = ->
+    str = if isDay then sample(strings) else days
+    isDay = not isDay
+
+    $parent = $('.days-text')
+
+    # Out with the old
+    $old = $parent.find('span')
+    $old.removeClass('enter').addClass('exit')
+    setTimeout (-> $old.remove()), 500
+
+    # In with the new
+    $new = $("<span>").text(str).addClass('enter').appendTo($parent)
+    setTimeout (-> $new.removeClass('enter')), 0
+
+    setTimeout work, 3000
+
+  work()
