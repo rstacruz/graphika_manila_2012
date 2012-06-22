@@ -42,13 +42,13 @@ $ ->
     $parent = $next.closest '.display'
     $current = $parent.find('.tab:visible')
 
-    $current.find('.card').addClass('fly out')
+    $current.find('.area > *').addClass('fly out')
 
     delay 400, ->
       $current.hide()
       $next.show()
-      $next.find('.card').removeClass('fly out').addClass('fly in')
-      delay 0, -> $next.find('.card').removeClass('in')
+      $next.find('.area > *').removeClass('fly out').addClass('fly in')
+      delay 0, -> $next.find('.area > *').removeClass('in')
 
     $(".active[href^='#']").removeClass 'active'
     $("a[href='#{href}']").addClass 'active'
