@@ -561,6 +561,7 @@ section
   100%
     background-position: -1000px 0
 
+
 .speakers .tab
   -webkit-animation-name: drift
   -webkit-animation-duration: 90s
@@ -575,6 +576,55 @@ section
     box-shadow: 5px 5px 0 rgba(black, 0.1)
     background: transparent
     padding: 0
+    position: relative
+
+  // Links
+  nav
+    +if-absolute(22px, 22px, auto, auto)
+    z-index: 10
+
+    ul, li
+      margin: 0
+      padding: 0
+      list-style-type: none
+
+    li, a
+      float: left
+
+    a
+      +transition(opacity 200ms linear)
+
+      display: block
+      width: 24px
+      height: 24px
+      margin-left: 8px
+
+      text-indent: -9999px
+      background-image: url(../images/sprite/icon-link.png)
+      background-size: 16px auto
+      background-position: center center
+      background-repeat: no-repeat
+
+      opacity: 0.6
+      border: 0
+
+    a[href*=vimeo]
+      background-image: url(../images/sprite/icon-vimeo.png)
+    a[href*=deviantart]
+      background-image: url(../images/sprite/icon-da.png)
+    a[href*=twitter]
+      background-image: url(../images/sprite/icon-twitter.png)
+    a[href*=dribbble]
+      background-image: url(../images/sprite/icon-dribbble.png)
+    a[href*=facebook]
+      background-image: url(../images/sprite/icon-facebook.png)
+    a[href*=youtube]
+      background-image: url(../images/sprite/icon-youtube.png)
+
+    a:hover
+      +transition(none)
+      opacity: 1
+
 
   // The segments
   .body, header
@@ -624,7 +674,7 @@ section
 .fly.in
   opacity: 0
   +transform-origin(50% 200%)
-  +transform(translate(0, -90px) perspective(1000px) rotateX(50deg))
+  +transform(translate(0, -90px) perspective(1000px) rotateX(40deg))
 
 .fly.out
   +transition(all 200ms $snap-in)
