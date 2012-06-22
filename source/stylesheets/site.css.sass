@@ -274,6 +274,7 @@ nav.main
     position: relative
     z-index: 5
     padding-top: $nav-offset
+    pointer-events: visible
 
   > div
     @extend %page
@@ -291,12 +292,7 @@ nav.main
     z-index: 1
     background: $menu-bg
     overflow: hidden
-
-  .social, .primary
     float: left
-
-  .social
-    padding: 0 20px
 
   li, a
     display: block
@@ -329,6 +325,11 @@ nav.screen
   background: $menu-bg
   z-index: 2
   +box-shadow(0 1px 0 rgba(black, 0.1), inset 0 3px 0 #111, inset 0 6px $line, 0 5px 0 rgba(black, 0.05))
+
+  .social
+    float: right
+    position: relative
+    top: 50px
 
   > div
     @extend %page

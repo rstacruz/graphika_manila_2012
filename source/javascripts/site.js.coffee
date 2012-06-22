@@ -5,11 +5,11 @@
 delay = (n, fn) -> setTimeout fn, n
 
 # Dynamically resize the header.
-$(window).on 'resize', -> $('header.intro').height $(window).height()
+$(window).on 'resize', -> $('header.intro').css minHeight: $(window).height()
 $ -> $(window).trigger 'resize'
 
 # Scrollstick
-$ -> $("nav.main").scrollstick zIndex: 11
+$ -> $("nav.main").scrollstick zIndex: 11, reclone: false
 
 # Anchorjump
 $ -> $('body').anchorjump for: "[href^='#']", offset: -64, parent: '.anchor'
