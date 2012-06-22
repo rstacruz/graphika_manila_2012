@@ -177,6 +177,7 @@ a
 header.intro
   background: #000 url(../images/bg.jpg) no-repeat
   background-size: 100% auto
+  +box-shadow(0 1px 0 rgba(black, 0.1), 0 5px 0 rgba(black, 0.05))
 
   position: relative
   z-index: 5
@@ -318,8 +319,7 @@ nav.screen
   height: 120px
   background: $menu-bg
   z-index: 2
-  // +box-shadow(0 2px 10px rgba(black, 0.1), inset 0 3px 0 #111, inset 0 6px $line)
-  +box-shadow(0 1px 0 rgba(black, 0.1), inset 0 3px 0 #111, inset 0 6px $line)
+  +box-shadow(0 1px 0 rgba(black, 0.1), inset 0 3px 0 #111, inset 0 6px $line, 0 5px 0 rgba(black, 0.05))
 
   > div
     @extend %page
@@ -676,7 +676,7 @@ section
 /* The card */
 .speakers .card
   &
-    box-shadow: 5px 5px 0 rgba(black, 0.1)
+    box-shadow: 5px 0 0 rgba(black, 0.1), -5px 0 0 rgba(black, 0.1)
     background: transparent
     padding: 0
     position: relative
@@ -791,7 +791,7 @@ body
 .countdown
   &
     margin: 90px 0 60px 0
-    background: url(../images/fiddlesticks.png) center center repeat-x
+    background: url(../images/fiddlesticks.png) center 0 repeat-x
 
   > div
     @extend %page
