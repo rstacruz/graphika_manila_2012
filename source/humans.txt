@@ -1,12 +1,15 @@
    _______   ___   ___
   /  _____\/    |/    |     Hello! We made this!
- |  | __  /  /| / /|  |   
+ |  | __  /  /| / /|  |
  |  |__| /  / |  / |  |     Design by Plus63 (plus63.net)
   \____ /  /  |_/  |__|     twitter @danmatutina / www: twistedfork.me
-       /  /                
+       /  /
       /__/   2  0  1  2     Development by Nadarei (nadarei.co)
                             twitter: @rstacruz / www: ricostacruz.com
                             www: michaelgalero.com
+_____
 
-View this site's real source code here:
-https://github.com/rstacruz/graphika_manila_2012
+  *  Built using Sass, HAML and CoffeeScript (via Middleman).
+     View this site's real source code here:
+ ,---'
+ '-> https://github.com/rstacruz/graphika_manila_2012
