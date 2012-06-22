@@ -9,7 +9,7 @@ $ -> $(window).trigger 'resize'
 $ -> $("nav.main").scrollstick zIndex: 11
 
 # Anchorjump
-$ -> $('body').anchorjump for: "[href^='#']", offset: -180
+$ -> $('body').anchorjump for: "[href^='#']", offset: -64, parent: '.anchor'
 
 # Logo magic
 $ ->
@@ -30,4 +30,17 @@ $ ->
 
     # Update clipping regions.
     $white.css height: (logo_height - y)
+
+# Tab switcheroo
+$ ->
+  $('body').on 'anchor', (e, href) ->
+    $next = $(href)
+    $parent = $next.closest '.display'
+    $current = $parent.find('.tab:visible')
+
+    $current.fadeOut 300, -> $next.fadeIn 300
+
+$ ->
+  if location.hash
+    $.anchorjump location.hash, offset: -64, parent: '.anchor'
 

@@ -77,6 +77,13 @@ $txt: #585858                // Text color
     text-transform: uppercase
     font-size: 1.2em
 
+  em
+    color: #555
+    font-style: normal
+    font-family: exo, sans-serif
+    font-weight: 700
+    letter-spacing: 1px
+
 /* == Base styles ============================================================= */
 
 html, td, textarea, input, button
@@ -94,7 +101,16 @@ html, body
 a
   color: #999
   text-decoration: none
+
+.content a
   border-bottom: solid 1px rgba($txt, 0.1)
+
+.content h2
+  @extend %armata-700-caps
+  font-size: 1.5em
+
+.hide
+  display: none
 
 /* == Logo ==================================================================== */
 
@@ -383,8 +399,7 @@ section
     padding: 30px
     width: $card-width
 
-  .card-lite
-    padding: 30px 0
+  .slim
     width: $card-width
     +box-sizing(border-box)
 
@@ -397,6 +412,9 @@ section
     margin-bottom: 20px
     font-size: 1.1em
 
+  h3 a
+    color: white
+
   h3 strong
     font-size: 1.5em
     display: block
@@ -405,7 +423,7 @@ section
     margin: 0
     padding: 0
 
-  a
+  ul a
     display: block
     background: #e7e7e7
     padding: 10px
@@ -415,10 +433,12 @@ section
     margin-bottom: 20px
     font-size: 0.9em
 
-  a, a *
+    border-bottom: solid 1px #ddd
+
+  ul a, ul a *
     +transition(all 100ms linear)
 
-  a strong
+  ul a strong
     @extend %armata-700-caps
     font-size: 1.1em
     color: #333
@@ -428,7 +448,7 @@ section
     margin-bottom: 5px
     border-bottom: solid 1px #ccc
 
-  a:hover, a:active, a.active
+  ul a:hover, a:active, a.active
     background: #111
     color: #888
 
@@ -436,7 +456,8 @@ section
       color: #fff
       border-bottom-color: #222
 
-
+.tickets .tab
+  min-height: 500px
 
 // Content area
 #tickets .content
