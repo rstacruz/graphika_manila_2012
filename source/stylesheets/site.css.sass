@@ -74,6 +74,13 @@ $snap-out: cubic-bezier(.85,.85,.15,.95)
   color: #aaa
   text-shadow: 2px 2px 0 rgba(black, 0.08)
 
+/* List reset */
+%list-reset
+  ul, li
+    margin: 0
+    padding: 0
+    list-style-type: none
+
 /* Clearfix */
 %clearfix
   +pie-clearfix
@@ -121,7 +128,7 @@ $snap-out: cubic-bezier(.85,.85,.15,.95)
 /* == Base styles ============================================================= */
 
 html, td, textarea, input, button
-  font-family: armata
+  font-family: armata, 'helvetica neue', sans-serif
   font-size: 9pt
   line-height: 1.5
   color: $txt
@@ -514,6 +521,8 @@ section
 
 /* Tickets content area */
 #tickets .content
+  @extend %list-reset
+
   &.slim
     margin-top: 0
     width: $card-width
@@ -521,11 +530,6 @@ section
   h2, h3
     font-size: 1.5em
     text-transform: none
-
-  ul, li
-    margin: 0
-    padding: 0
-    list-style-type: none
 
   ul
     border-top: dotted 1px $line
@@ -536,14 +540,10 @@ section
 
 /* Conference pass */
 #tickets .conference-pass
+  @extend %list-reset
+
   ul
     @extend %clearfix
-
-  ul, li
-    margin: 0
-    padding: 0
-    list-style-type: none
-    border: 0
 
   li strong, li em
     display: block
@@ -684,13 +684,9 @@ section
 
   // Links
   nav
+    @extend %list-reset
     +if-absolute(12px, 22px, auto, auto)
     z-index: 1
-
-    ul, li
-      margin: 0
-      padding: 0
-      list-style-type: none
 
     li, a
       float: left
@@ -876,6 +872,27 @@ body
       @extend %armata-700-caps
       color: #aaa
 
+/* == Past speakers =========================================================== */
+
+#past-speakers
+  @extend %list-reset
+
+  ul
+    @extend %clearfix
+    margin-top: 30px
+
+  li
+    border-top: dotted 1px $line
+    width: 50%
+    float: left
+    +box-sizing(border-box)
+    padding: 30px 30px 30px 0
+
+  li strong
+    font-size: 1.4em
+    @extend %armata-700-caps
+
+
 /* == Info ==================================================================== */
 
 #info
@@ -892,20 +909,15 @@ body
     h2
       text-transform: none
 
-    ul, li
-      margin: 0
-      padding: 0
-      list-style-type: none
+    @extend %list-reset
 
 /* == FAQ ===================================================================== */
+
 #faq
+  @extend %list-reset
+
   ul
     @extend %clearfix
-
-  ul, li
-    margin: 0
-    padding: 0
-    list-style-type: none
 
   li
     padding: 30px 0
