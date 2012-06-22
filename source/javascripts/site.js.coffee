@@ -1,6 +1,8 @@
 #= require jquery.scrollstick
 #= require jquery.anchorjump
-#
+
+delay = (n, fn) -> setTimeout fn, n
+
 # Dynamically resize the header.
 $(window).on 'resize', -> $('header.intro').height $(window).height()
 $ -> $(window).trigger 'resize'
@@ -39,7 +41,13 @@ $ ->
     $parent = $next.closest '.display'
     $current = $parent.find('.tab:visible')
 
-    $current.fadeOut 300, -> $next.fadeIn 300
+    $current.find('.card').addClass('fly out')
+
+    delay 400, ->
+      $current.hide()
+      $next.show()
+      $next.find('.card').removeClass('fly out').addClass('fly in')
+      delay 0, -> $next.find('.card').removeClass('in')
 
     $(".active[href^='#']").removeClass 'active'
     $("a[href='#{href}']").addClass 'active'
