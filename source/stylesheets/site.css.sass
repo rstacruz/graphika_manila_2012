@@ -63,6 +63,13 @@ $txt: #585858                // Text color
   text-transform: uppercase
   letter-spacing: 1px
 
+/* Heading type */
+%heading-type
+  @extend %exo-100-caps
+  color: #aaa
+  text-shadow: 2px 2px 0 rgba(black, 0.08)
+
+
 /* == Content normalize ======================================================= */
 
 .content
@@ -329,10 +336,8 @@ section
 
     // The text
     h1, h2, h3
-      @extend %exo-100-caps
-      color: #aaa
+      @extend %heading-type
       font-size: 32pt
-      text-shadow: 2px 2px 0 rgba(black, 0.08)
 
       // background: $bg
       // position: relative
@@ -350,7 +355,6 @@ section
 
   // Display area
   .display
-    +box-shadow(inset 0 10px 5px -5px rgba(black, 0.05))
     background: $bg
 
   .area
@@ -360,6 +364,9 @@ section
 
   .tab .area
     padding: 30px 0 30px $left-column
+
+  .tab
+    +box-shadow(inset 0 10px 5px -5px rgba(black, 0.05))
 
   // Sidebar of display area
   aside
@@ -466,7 +473,7 @@ section
 
     strong
       color: #fff
-      // border-bottom-color: #222
+      border-bottom-color: #222
 
 .tickets .tab
   min-height: 500px
@@ -501,6 +508,7 @@ section
     padding: 200px 0
 
 /* == Footer ================================================================== */
+
 #footer
   &
     margin-top: 50px
@@ -535,3 +543,48 @@ section
       color: $txt
 
 
+/* == Content: Work =========================================================== */
+
+/* The card */
+.speakers .card
+  &
+    box-shadow: 5px 5px 0 rgba(black, 0.1)
+    background: transparent
+    padding: 0
+
+  // The segments
+  .body, header
+    padding: 20px 30px
+
+  .body
+    background: rgba(#111, 0.9)
+    color: #ccc
+
+  header
+    background: $bg
+
+  // The heading styles
+  header h2, header h3, header h5
+    margin: 0
+
+  header h2
+    @extend %armata-700-caps
+    font-size: 20pt
+    color: #333
+    text-shadow: 3px 3px 0 #eee
+
+  // Speaker
+  header h5
+    margin-top: -3px
+    @extend %exo-700-caps
+    font-size: 9pt
+    color: #999
+
+  // What we do
+  header h3
+    @extend %armata-700-caps
+    margin-top: 10px
+    padding-top: 10px
+    border-top: solid 1px $line
+    color: #999
+    font-size: 13pt
