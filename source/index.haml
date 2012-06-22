@@ -233,12 +233,13 @@
     .tab#tickets
       .area
         .content.side.conference-pass
-
           :markdown
-            ## Conference pass
+            * __Php 1,750__ *Early bird rate*
+            * __Php 2,000__ *Regular rate*
 
-            * __Php 1,750__ Early bird rate
-            * __Php 2,000__ Regular rate
+          .tickets
+            = image_tag 'ticket-student.jpg', class: 'student'
+            = image_tag 'ticket-pro.jpg', class: 'pro'
 
         .content.slim
           :markdown
