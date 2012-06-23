@@ -65,7 +65,7 @@
       top = $area.offset().top + options.offset;
     }
 
-    $('body').animate({ scrollTop: top }, options.speed);
+    $('body, html').animate({ scrollTop: top }, options.speed);
     $('body').trigger('anchor', href);
 
     // Add the location hash via pushState.

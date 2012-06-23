@@ -143,7 +143,7 @@
       top = $area.offset().top + options.offset;
     }
 
-    $('body').animate({ scrollTop: top }, options.speed);
+    $('body, html').animate({ scrollTop: top }, options.speed);
     $('body').trigger('anchor', href);
 
     // Add the location hash via pushState.
@@ -273,6 +273,25 @@
     return setTimeout(fn, n);
   };
 
+  /*
+  # Vertical responsiveness
+  */
+
+
+  $(window).on('resize', function() {
+    var klass;
+    klass = '';
+    if ($(window).height() < 650) {
+      klass = 'short';
+    }
+    return $('body').removeClass('short').addClass(klass);
+  });
+
+  /*
+  # Dynamically resize the header
+  */
+
+
   $(window).on('resize', function() {
     return $('header.intro').css({
       minHeight: $(window).height()
@@ -283,12 +302,22 @@
     return $(window).trigger('resize');
   });
 
+  /*
+  # Scrollstick
+  */
+
+
   $(function() {
     return $("nav.main").scrollstick({
       zIndex: 11,
       reclone: false
     });
   });
+
+  /*
+  # Anchorjump
+  */
+
 
   $(function() {
     return $('body').anchorjump({
@@ -297,6 +326,12 @@
       parent: '.anchor'
     });
   });
+
+  /*
+  # Logo magic
+  # (kittens died in making this effect)
+  */
+
 
   $(function() {
     var $black, $logo, $white;
@@ -327,22 +362,32 @@
     return $('body').on('anchor', function(e, href) {
       var $current, $next, $parent;
       $next = $(href);
-      $parent = $next.closest('.display');
-      $current = $parent.find('.tab:visible');
-      $current.find('.area > *').addClass('fly out');
-      delay(400, function() {
-        $current.hide();
-        $next.show();
-        $next.find('.area > *').removeClass('fly out').addClass('fly in');
-        return delay(0, function() {
-          return $next.find('.area > *').removeClass('in');
+      if (href === '#call-for-entries') {
+        $('body').addClass('entries-active');
+      } else {
+        $('body').removeClass('entries-active');
+        $parent = $next.closest('.display');
+        $current = $parent.find('.tab:visible');
+        $current.find('.area > *').addClass('fly out');
+        delay(400, function() {
+          $current.hide();
+          $next.show();
+          $next.find('.area > *').removeClass('fly out').addClass('fly in');
+          return delay(0, function() {
+            return $next.find('.area > *').removeClass('in');
+          });
         });
-      });
+      }
       $(".active[href^='#']").removeClass('active');
       $("a[href='" + href + "']").addClass('active');
       return null;
     });
   });
+
+  /*
+  # Autojump
+  */
+
 
   $(window).on('load', function() {
     if (location.hash) {
@@ -354,6 +399,11 @@
       });
     }
   });
+
+  /*
+  # Countdown
+  */
+
 
   $(function() {
     return $('[data-countdown_until]').each(function() {
@@ -386,6 +436,11 @@
     });
   });
 
+  /*
+  # Days text rotator
+  */
+
+
   $(function() {
     var days, isDay, sample, strings, work;
     days = ['days'];
@@ -412,5 +467,10 @@
     };
     return work();
   });
+
+  /*
+  # Call for entries toggle
+  */
+
 
 }).call(this);
