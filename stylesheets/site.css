@@ -230,7 +230,7 @@ section .side { width: 350px; float: right; }
 
 /* == Content: Contact us ===================================================== */
 #contact .display { background: #0d0d0d; color: #888888; padding: 40px 0; }
-#contact .content { padding-left: 0; }
+#contact .content { padding-left: 0; min-height: 500px; }
 #contact .content h2, #contact .content h3, #contact .content strong { color: #aaaaaa; font-size: 1.1em; text-transform: none; margin-bottom: 0; }
 #contact .content h2 + p, #contact .content h3 + p, #contact .content strong + p { margin-top: 0; }
 
