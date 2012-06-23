@@ -57,16 +57,22 @@ $ ->
 $ ->
   $('body').on 'anchor', (e, href) ->
     $next = $(href)
-    $parent = $next.closest '.display'
-    $current = $parent.find('.tab:visible')
 
-    $current.find('.area > *').addClass('fly out')
+    if href is '#call-for-entries'
+      $('body').addClass 'entries-active'
 
-    delay 400, ->
-      $current.hide()
-      $next.show()
-      $next.find('.area > *').removeClass('fly out').addClass('fly in')
-      delay 0, -> $next.find('.area > *').removeClass('in')
+    else
+      $('body').removeClass 'entries-active'
+      $parent = $next.closest '.display'
+      $current = $parent.find('.tab:visible')
+
+      $current.find('.area > *').addClass('fly out')
+
+      delay 400, ->
+        $current.hide()
+        $next.show()
+        $next.find('.area > *').removeClass('fly out').addClass('fly in')
+        delay 0, -> $next.find('.area > *').removeClass('in')
 
     $(".active[href^='#']").removeClass 'active'
     $("a[href='#{href}']").addClass 'active'
@@ -141,3 +147,14 @@ $ ->
 
   work()
 
+###
+# Call for entries toggle
+###
+
+# $('.call-for-entries, .entries-info .close').click (e) ->
+#   e.preventDefault()
+
+#   if $('body').is('.entries-active')
+#     $.anchorjump '#'
+#   else
+#     $.anchorjump '#call-for-entries'

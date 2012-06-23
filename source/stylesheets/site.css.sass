@@ -66,14 +66,18 @@ $snap-out: cubic-bezier(.85,.85,.15,.95)
   .wf-armata-n4-active &
     font-family: armata
 
-/* Type: Exo 700 caps */
-%exo-700-caps
+/* Type: Exo 700 */
+%exo-700
   font-family: 'helvetica neue', sans-serif
   font-weight: 700
-  text-transform: uppercase
-  letter-spacing: 1px
   .wf-exo-n7-active &
     font-family: exo
+
+/* Type: Exo 700 caps */
+%exo-700-caps
+  @extend %exo-700
+  text-transform: uppercase
+  letter-spacing: 1px
 
 /* Heading type */
 %heading-type
@@ -274,7 +278,6 @@ header.intro
     // Vertical responsiveness
     .short &
       padding-top: 60px
-      
 
     &, *
       height: 30px
@@ -1129,3 +1132,131 @@ body
     display: block
     font-size: 1.2em
     margin-bottom: 1px
+
+/* == Call for entries ======================================================== */
+
+$speed: 300ms
+$ease: cubic-bezier(.06, .78, .07, .93)
+
+a.call-for-entries
+  +if-absolute(0, 30px, auto, auto)
+  z-index: 24
+
+  background: #fafafa
+  color: $txt
+  padding: 20px
+  width: 180px
+  text-align: left
+  font-size: 0.9em
+  line-height: 1.5
+
+  +transition(background-color 100ms linear, top ($speed * 0.5) $ease)
+
+  strong
+    display: block
+    font-size: 1.2em
+    text-transform: uppercase
+
+    padding: 0 0 7px 0
+    margin: 0 0 7px 0
+    border-bottom: dotted 1px #ccc
+
+    @extend %exo-700
+
+  &:hover
+    background: white
+
+.entries-info
+  +if-absolute(-450px, 0, auto, 0)
+  z-index: 25
+  +transition(top $speed $ease)
+
+.entries-active .entries-info
+  top: 0
+
+.entries-info
+  min-width: 900px
+  line-height: 1.6
+  font-size: 0.9em
+
+  @extend %clearfix
+
+  +box-shadow(0 0 10px rgba(black, 0.8))
+  background: #fafafa
+  padding: 50px
+  padding-left: 20px
+  padding-right: 0
+
+  color: #333
+  text-shadow: 0 0 2px rgba(white, 0.2)
+
+  a
+    border-bottom: 0
+
+  h3, p
+    margin: 20px 0
+
+  h3:first-child
+    margin-top: 0
+
+  // Close button
+  .close
+    +if-absolute(30px, 30px, auto, auto)
+    text-align: center
+    z-index: 1
+    font-size: 1.9em
+    width: 50px
+    height: 50px
+    line-height: 50px
+    display: block
+
+    background: black
+    color: #eee
+
+    &:hover
+      background: #333
+
+  p.guidelines
+    border-top: dotted 1px #ccc
+    border-bottom: dotted 1px #ccc
+    padding: 10px 0
+
+  p.download
+    padding-top: 10px
+
+    strong
+      @extend %exo-700
+
+    a
+      display: block
+    a:hover
+      color: #333
+
+  // Heading
+  header
+    border-bottom: dotted 1px #ccc
+    padding: 0 0 20px 0
+    margin: 0 0 20px 0
+    margin-left: 30px
+
+    h2
+      margin: 0
+      font-size: 1.7em
+      text-transform: uppercase
+
+    h2 strong
+      margin-right: 10px
+      @extend %exo-700
+
+    h2 span
+      @extend %exo-100
+
+  h3
+    @extend %exo-700
+    font-size: 1.1em
+    text-transform: uppercase
+
+  .column
+    width: 270px
+    float: left
+    margin-left: 30px
