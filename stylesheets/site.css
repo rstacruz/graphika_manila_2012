@@ -233,7 +233,7 @@ section .side { width: 350px; float: right; }
 @-webkit-keyframes drift { 0% { background-position: 0 0; }
   100% { background-position: -1200px 0; } }
 
-.speakers .tab { -webkit-animation-name: drift; -webkit-animation-duration: 90s; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; background-size: 1200px 510px; }
+.speakers .tab { -webkit-animation-name: drift; -webkit-animation-duration: 90s; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; background-size: 1200px 420px; }
 
 /* The speaker card */
 .speakers .card { box-shadow: 5px 0 0 rgba(0, 0, 0, 0.1), -5px 0 0 rgba(0, 0, 0, 0.1); background: transparent; padding: 0; position: relative; }
@@ -248,7 +248,7 @@ section .side { width: 350px; float: right; }
 .speakers .card nav a[href*=youtube] { background-image: url(../images/sprite/icon-youtube.png); }
 .speakers .card nav a:hover { -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none; transition: none; opacity: 1; }
 .speakers .card header { padding: 0 30px 20px 30px; }
-.speakers .card .body { padding: 30px 30px 60px 30px; background: rgba(34, 34, 34, 0.96); color: #cccccc; min-height: 280px; }
+.speakers .card .body { padding: 30px 30px 30px 30px; background: rgba(34, 34, 34, 0.96); color: #cccccc; min-height: 220px; }
 .speakers .card header { background: white; }
 .speakers .card header h2, .speakers .card header h3, .speakers .card header h5 { margin: 0; }
 .speakers .card header h2 { font-size: 20pt; color: #333333; text-shadow: 3px 3px 0 #eeeeee; }
