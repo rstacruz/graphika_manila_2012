@@ -3,6 +3,7 @@
 @import ifkit/position
 @import ifkit/form_reset
 @import ifkit/normalize
+@import ifkit/animation
 
 // == Constants ===============================================================
 
@@ -693,19 +694,14 @@ section
 
 /* == Content: Work =========================================================== */
 
-@-webkit-keyframes drift
++if-keyframes(drift)
   0%
     background-position: 0 0
   100%
     background-position: -1200px 0
 
-
 .speakers .tab
-  -webkit-animation-name: drift
-  -webkit-animation-duration: 90s
-  -webkit-animation-iteration-count: infinite
-  -webkit-animation-timing-function: linear
-
+  +if-animation(drift, 90s, infinite, linear)
   background-size: 1200px 420px
 
 /* The speaker card */
