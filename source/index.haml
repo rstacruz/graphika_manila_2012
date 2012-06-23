@@ -1,6 +1,6 @@
 - content_for :head do
   %title Graphika Manila 2012
-  %meta{name: 'description', content: 'Graphika Manila Interational Multimedia Conference_is the premiere multimedia and graphic design event in the Philippines.'}
+  %meta{name: 'description', content: 'Graphika Manila Interational Multimedia Conference is the premiere multimedia and graphic design event in the Philippines.'}
   %meta{name: 'og:image', content: 'http://www.graphikamanila.com/images/preview.jpg'}
 
 / == Logo ====================================================================
@@ -42,7 +42,7 @@
         Cuison](#jp-cuison), [Jerome Austria](#jerome-austria), [Create.PH](#create-ph)
 
     .actions
-      %a.button{href: '#tickets'} Buy tickets now
+      %a.button{href: '#tickets'} Get your tickets now! Early Bird 'til July 6.
 
 
 / == Main navigation =========================================================
@@ -124,15 +124,18 @@
       .area
         .content.card
           %nav
-            :markdown
-              * [Website](http://psyop.tv)
-              * [Twitter](http://twitter.com/psyop)
-              * [Vimeo](http://vimeo.com/psyop)
+            %ul
+              %li
+                %a{href: 'http://psyop.tv', target: '_blank'} Website
+              %li
+                %a{href: 'http://twitter.com/psyop', target: '_blank'} Twitter
+              %li
+                %a{href: 'http://vimeo.com/psyop', target: '_blank'} Vimeo
 
           %header
             :markdown
               ## Psyop
-              ##### Speaker: Gerald Ding, Director
+              ##### New York, USA / Speaker: Gerald Ding, Director
 
               ### Motion Graphics & Animation
 
@@ -151,46 +154,48 @@
       .area
         .content.card
           %nav
-            :markdown
-              * [Website](http://gmunk.com)
-              * [Twitter](http://twitter.com/gmunk)
-              * [Vimeo](http://vimeo.com/gmunk)
+            %ul
+              %li
+                %a{href: 'http://gmunk.com', target: '_blank'} Website
+              %li
+                %a{href: 'http://twitter.com/gmunk', target: '_blank'} Twitter
+              %li
+                %a{href: 'http://vimeo.com/gmunk', target: '_blank'} Vimeo
 
           %header
             :markdown
               ## Gmunk
-              ##### Speaker: Bradley G. Munkowitz, California, USA
+              ##### California, USA / Speaker: Bradley G. Munkowitz
 
               ### Motion Graphics & Visual Effects
 
           .body
             :markdown
               Bradley G Munkowitz began his career as an Interactive Designer
-              at London-based Vir2L Studios Europe while crafting immersive web
-              experiences on his cult site GMUNK.com.
-
-              He entered the motion graphics world under the tutelage of Kyle
-              Cooper at Imaginary Forces and has since functioned as a Design
-              Director for international brands via his work at top tier
-              outfits Engine Design, Transistorstudios, BUCK and Prologue
-              Films.
-
+              while crafting immersive web experiences on his cult site
+              GMUNK.com. He entered the motion graphics world under the
+              tutelage of Kyle Cooper at Imaginary Forces and has since
+              functioned as a Design Director for top tier outfits Engine
+              Design, Transistorstudios, BUCK and Prologue Films.
+              
               He spent the entirety of 2010 at Digital Domain leading a team of
               GFX All-Stars to concept, design and execute holographic content
-              for the  film TRON Legacy.
+              for the film TRON Legacy.
 
     .tab#droga5.hide{style: "background: url(#{image_path 'work-droga5.jpg'})"}
       .area
         .content.card
           %nav
-            :markdown
-              * [Website](http://droga5.com)
-              * [Twitter](http://twitter.com/droga5)
+            %ul
+              %li
+                %a{href: 'http://droga5.com', target: '_blank'} Website
+              %li
+                %a{href: 'http://twitter.com/droga5', target: '_blank'} Twitter
 
           %header
             :markdown
               ## Droga5
-              ##### Speaker: Sudeep Gohil (CEO), Sydney, AU
+              ##### Sydney, AU / Speaker: Sudeep Gohil (CEO)
 
               ### Advertising
 
@@ -199,27 +204,27 @@
               Droga5 is an independent advertising network. Creatively Led.
               Strategically Driven. Technology Friendly. Humanity Obsessed.
 
-              Opened in 2006, Droga5 is an independent advertising agency
-              founded by David Droga, who serves as its creative chairman.
-              Headquartered in Manhattan, Droga5 also has offices in Sydney and
-              Auckland. The agency's clients include Prudential, Puma, Kraft
-              Foods, Microsoft, The Coca-Cola Company, Hennessy and Amstel
-              Light, among others. Droga5 has also launched social projects for
-              UNICEF, the 2008 Obama campaign and the New York City and
-              Oklahoma City Departments of Education.
+              Opened in 2006, Droga5 is an independent advertising agency,
+              headquartered in Manhattan, Droga5 also has offices in Sydney and
+              Auckland. The agency's clients include Prudential, Puma,
+              Kraft Foods, Microsoft, The Coca-Cola Company, and Hennessy,
+              among others. Droga5 has also launched social projects for UNICEF
+              and the 2008 Obama campaign.
 
     .tab#hydro74.hide{style: "background: url(#{image_path 'work-hydro74.jpg'})"}
       .area
         .content.card
           %nav
-            :markdown
-              * [Website](http://hydro74.com)
-              * [Twitter](http://twitter.com/hydro74)
+            %ul
+              %li
+                %a{href: 'http://hydro74.com', target: '_blank'} Website
+              %li
+                %a{href: 'http://twitter.com/hydro74', target: '_blank'} Twitter
 
           %header
             :markdown
               ## Hydro 74
-              ##### Speaker: Joshua Smith, Florida, USA
+              ##### Florida, USA / Speaker: Joshua Smith
 
               ### Illustration and Graphic Design
 
@@ -229,19 +234,24 @@
               Smith. The soul purpose of his career is to push the boundries in
               doing what he feels is relevant to the market as well as extract
               various elements and trends to be able to offer them up his my
-              own personal work. But let's be honest. I do what I love because
-              I love it.He firmly believes in having set style tones, yet a
-              sense of diversity to make any various project unique to the
-              demands that are set forth.
+              own personal work. He firmly believes in having set style tones,
+              yet a sense of diversity to make any various project unique to
+              the demands that are set forth.
+              
+              Some of his clients include Nike, Adidas, Lucas Films, Levis,
+              Harley Davidson, among many others.
 
     .tab#jp-cuison.hide{style: "background: url(#{image_path 'work-jp-cuison.jpg'})"}
       .area
         .content.card
           %nav
-            :markdown
-              * [Website](http://jpcuisonart.blogspot.com)
-              * [Twitter](http://twitter.com/jpcuison)
-              * [Facebook](http://facebook.com/jpcuison)
+            %ul
+              %li
+                %a{href: 'http://jpcuisonart.blogspot.com', target: '_blank'} Website
+              %li
+                %a{href: 'http://twitter.com/jpcuison', target: '_blank'} Twitter
+              %li
+                %a{href: 'http://facebook.com/jpcuison', target: '_blank'} Facebook
 
           %header
             :markdown
@@ -252,23 +262,25 @@
 
           .body
             :markdown
-              JP graduated with a Bachelor of Fine Arts in Visual Communication from the
-              University of the Philippines. As a young talent, he was awarded with the Best
-              Thesis recognition. JP is also recognized highly in the field of advertising as
-              he is a two-time Philippine representative to the prestigious Cannes Young
-              Lions International Advertising Festival. Though he has a hectic schedule as a
-              senior art director, he still manages to pursue non-advertising endeavors. He
-              just concluded his 1st solo exhibit entitled "GIGZILLA" (a collection of his
-              gig posters) at Pablo Gallery, Cubao X last May, 2010. He is also half the
-              group that produces the underground comix sensation, PUNNX COMIX. He loves
-              designer vinyl toys.
+              JP graduated with a Bachelor of Fine Arts in Visual Communication
+              from the University of the Philippines. As a young talent, he was
+              awarded with the Best Thesis recognition. JP is also recognized
+              highly in the field of advertising as he is a two-time Philippine
+              representative to the prestigious Cannes Young Lions
+              International Advertising Festival. Though he has a hectic
+              schedule as a senior art director, he still manages to pursue
+              non-advertising endeavors. He just concluded his 1st solo exhibit
+              entitled "GIGZILLA" (a collection of his gig posters)
+              at Pablo Gallery, Cubao X last May, 2010. He loves designer vinyl
+              toys.
 
     .tab#jerome-austria.hide{style: "background: url(#{image_path 'work-jerome-austria.jpg'})"}
       .area
         .content.card
           %nav
-            :markdown
-              * [Website](http://jeromeaustria.com)
+            %ul
+              %li
+                %a{href: 'http://jeromeaustria.com', target: '_blank'} Website
 
           %header
             :markdown
@@ -283,28 +295,28 @@
               interactive advertising. He was recently named EVP Digital Group
               Creative Director at Deutsch LA. He collected over 50
               international awards from prestigious competitions including
-              Cannes Lions and the Clios.  He has also been named one of the
-              winners of the ADC Young Guns 6 award.
-
-              His career has many milestones including working on the team that
-              brought the Nike Digital Agency of Record to R/GA, helping
-              jump-start the AKQA office in NY with work for Coca-Cola, and
-              spending 3 years building a 20+ interactive team from scratch at
-              Wieden+Kennedy NY and then eventually running the agency as
-              co-executive creative director in 2010.
+              Cannes Lions and the Clios.
+              
+              His career milestones include: working on the team that brought
+              the Nike Digital Agency of Record to R/GA, helping jump-start the
+              AKQA office in NY with work for Coca-Cola, and building a 20+
+              interactive team from scratch at Wieden+Kennedy NY and then
+              eventually running the agency as co-executive creative director.
 
     .tab#create-ph.hide{style: "background: url(#{image_path 'work-create-ph.jpg'})"}
       .area
         .content.card
           %nav
-            :markdown
-              * [Website](http://create.ph)
-              * [Twitter](http://twitter.com/createph)
+            %ul
+              %li
+                %a{href: 'http://create.ph', target: '_blank'} Website
+              %li
+                %a{href: 'http://twitter.com/createph', target: '_blank'} Twitter
 
           %header
             :markdown
               ## Create.PH
-              ##### Speaker: Christian San Jose
+              ##### Manila, Philippines / Speaker: Christian San Jose
 
               ### Graphic and Web Design
 
@@ -350,12 +362,12 @@
           :markdown
             * ### Professionals:
             * __P 2,000__ *Regular rate*
-            * __P 1,750__ *until July 13*
+            * __P 1,750__ *Early Bird* *until July 13*
 
           :markdown
             * ### Students:
             * __P 1,750__ *Regular rate*
-            * __P 1,550__ *until July 13*
+            * __P 1,550__ *Early Bird* *until July 13*
 
           .tickets
             = image_tag 'ticket-student.jpg', class: 'student'
@@ -366,12 +378,12 @@
             ### Each Graphika Manila Ticket includes:
 
             * Admission to the full-day conference
-            * Conference kit which includes the Graphika Manila 2012 book
+            * Conference kit which includes the GM 2012 book
             * E-certificate of attendance
 
             ### Important reminders:
 
-            * Both Conference & student passes have the same priviledges.
+            * Conference & student passes have the same priviledges.
             * Food/lunch not included in the ticket price.
             * Seats are on a first-come, first-served basis only.
             * Students are required to present a valid ID upon entry.
@@ -391,7 +403,7 @@
                 Makati City
                 
                 *Professional & Student Tickets*
-                10:00AM - 8:00PM  
+                10:00AM - 9:00PM  
                 Phone: 816-3574
 
             %article
@@ -433,7 +445,7 @@
                 __Media Max (DLS-CSB)__
 
                 * *Contact:* Chelsea Delfin
-                * *Mobile:* (+63906) 249-8619
+                * *Mobile:* +63 (906) 249-8619
                 * *Student Tickets Only*
 
     .tab#bank-deposit.hide
@@ -480,22 +492,22 @@
       .area
         .content.card
           :markdown
-            __Graphika Manila Interational Multimedia Conference__ is the premiere
-            multimedia and graphic design event in the Philippines.  Since 2006,
-            Graphika Manila has attracted over 7,500 design students and
-            professionals and is now hailed as one of the most influential
-            multimedia events in the country.
+            __Graphika Manila__ is the premiere multimedia and graphic design
+            event in the Philippines.  Since 2006, Graphika Manila has
+            attracted over 7,500 design students and professionals and is now
+            hailed as one of the most influential multimedia events in the
+            country.
 
             As it celebrates its seventh year running, Graphika Manila once more
             brings together Manila's creative minds to listen to inspiring
             stories and celebrate the works of the best multimedia and graphic
             designers from the Philippines and from around the globe.
 
-            Simply put it as a creative symposium with speakers from different
+            Simply put, it's a creative symposium with speakers from different
             fields of the creative arts. The conference focuses on the creative
             side of design rather than technology.
 
-    .tab.hide#past-speakers{style: "background: url(#{image_path 'speakers.jpg'}) center top repeat; background-size: 1400px auto"}
+    .tab.hide#past-speakers{style: "background: url(#{image_path 'speakers.jpg'}) center top repeat"}
       .area
         .content.card
           :markdown
@@ -519,7 +531,7 @@
 
             * __2009__  
             Industrial Light and Magic, Stefan Sagmeister, Brand New School,
-            EverywhereWeShoot, Springboard, Adobo Magazine
+            Everywhere We Shoot!, Springboard, Adobo
 
             * __2010__  
             Tara McPherson, Danny Yount, Phunk Studio, Underground Logic,
@@ -548,7 +560,7 @@
         .content.full
           .hero
             .left
-              %a{href: 'http://www.flickr.com/photos/acullador/2064561929/lightbox/'}
+              %a{href: 'http://www.flickr.com/photos/bychester/2804940203/', target: '_blank'}
                 = image_tag 'smx.jpg', alt: "SMX Convention Center"
             .right
               = google_map "https://maps.google.com/maps?q=SMX+Convention+Center,+Marina+Way,+Pasay,+Metro+Manila,+Philippines&hl=en&sll=37.0625,-95.677068&sspn=47.167389,91.318359&oq=smx+con&hq=SMX+Convention+Center,+Marina+Way,&hnear=Pasay,+Metro+Manila,+Philippines&t=m&z=15", width: 319, height: 180
