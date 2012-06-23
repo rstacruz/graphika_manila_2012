@@ -228,7 +228,7 @@ header.intro
       margin-bottom: 20px
 
   // Speakers list
-  .speakers
+  .speakers-overview
     margin-top: 50px
 
     +if-relative($left: -5px)
@@ -236,8 +236,16 @@ header.intro
     font-size: 28pt
     text-transform: uppercase
     width: 500px
-    line-height: 1.5
+    line-height: 1.4
     color: white
+
+    // Featuring presentations by:
+    h3
+      font-size: 9pt
+      text-transform: none
+      margin-bottom: 10px
+      color: #888
+      padding-left: 4px
 
     a
       color: white
