@@ -4,17 +4,35 @@
 
 delay = (n, fn) -> setTimeout fn, n
 
-# Dynamically resize the header.
+###
+# Vertical responsiveness
+###
+#
+$(window).on 'resize', ->
+  klass = ''
+  klass = 'short' if $(window).height() < 650
+  $('body').removeClass('short').addClass klass
+
+###
+# Dynamically resize the header
+###
 $(window).on 'resize', -> $('header.intro').css minHeight: $(window).height()
 $ -> $(window).trigger 'resize'
 
+###
 # Scrollstick
+###
 $ -> $("nav.main").scrollstick zIndex: 11, reclone: false
 
+###
 # Anchorjump
+###
 $ -> $('body').anchorjump for: "[href^='#']", offset: -64, parent: '.anchor'
 
+###
 # Logo magic
+# (kittens died in making this effect)
+###
 $ ->
   $logo  = $('#logo a')
   $white = $logo.find('.white').show()
@@ -54,12 +72,16 @@ $ ->
     $("a[href='#{href}']").addClass 'active'
     null
 
+###
 # Autojump
+###
 $(window).on 'load', ->
   if location.hash
     delay 0, -> $.anchorjump location.hash, offset: -64, parent: '.anchor'
 
+###
 # Countdown
+###
 $ ->
   $('[data-countdown_until]').each ->
     $this = $(this)
@@ -88,7 +110,9 @@ $ ->
             null
 
 
+###
 # Days text rotator
+###
 $ ->
   days = ['days']
   strings = ['nights', 'mornings', 'dreams', 'midnights', 'sunsets', 'evenings']
@@ -116,3 +140,4 @@ $ ->
     setTimeout work, 3000
 
   work()
+
