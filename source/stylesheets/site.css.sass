@@ -587,7 +587,7 @@ section
     border-bottom: dotted 1px $line
     padding: 9px 0
 
-/* Conference pass */
+/* Conference pass, tickets */
 #tickets .conference-pass
   @extend %list-reset
   width: 400px
@@ -628,7 +628,8 @@ section
     font-size: 1.2em
     color: #aaa
 
-  li:first-child + li
+  // Light grey
+  li:first-child + li + li
     strong
       color: #999
     em
