@@ -209,7 +209,7 @@ section .side { width: 350px; float: right; }
 #tickets .content ul { border-top: dotted 1px #dddddd; }
 #tickets .content li { border-bottom: dotted 1px #dddddd; padding: 9px 0; }
 
-/* Conference pass */
+/* Conference pass, tickets */
 #tickets .conference-pass { width: 400px; }
 #tickets .conference-pass ul { margin-top: 0; border: 0; margin-bottom: 20px; }
 #tickets .conference-pass li strong, #tickets .conference-pass li em { display: block; text-align: right; }
@@ -217,8 +217,8 @@ section .side { width: 350px; float: right; }
 #tickets .conference-pass li em { font-style: normal; }
 #tickets .conference-pass li { width: 33%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 0; padding-top: 0; float: left; line-height: 1.3; }
 #tickets .conference-pass li:first-child { width: 33%; text-align: right; padding-top: 5px; font-size: 1.2em; color: #aaaaaa; }
-#tickets .conference-pass li:first-child + li strong { color: #999999; }
-#tickets .conference-pass li:first-child + li em { color: #aaaaaa; }
+#tickets .conference-pass li:first-child + li + li strong { color: #999999; }
+#tickets .conference-pass li:first-child + li + li em { color: #aaaaaa; }
 
 /* Ticket images */
 #tickets .tickets { margin-top: 50px; position: relative; }
