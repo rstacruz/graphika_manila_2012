@@ -8,10 +8,11 @@ helpers WebfontsHelper
 helpers MapHelper
 helpers GoogleAnalyticsHelper
 
+activate :relative_assets
+activate :cache_buster
+
 configure :build do
   activate :automatic_image_sizes
-  activate :cache_buster
-  activate :relative_assets
 
   compass_config { |config|
     config.output_style = :compact
