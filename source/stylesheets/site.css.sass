@@ -5,6 +5,7 @@
 @import ifkit/normalize
 @import ifkit/media
 @import ifkit/animation
+@import ifkit/unicode
 
 // == Constants ===============================================================
 
@@ -165,7 +166,6 @@ a
 
 .hide
   display: none
-
 
 /* == Logo ==================================================================== */
 
@@ -716,6 +716,147 @@ section
   padding-bottom: 30px
   height: 620px
 
+/* == Share =================================================================== */
+
+#share
+  background: url(../images/fiddlesticks.png) center 300px repeat-x
+
+/* Heading */
+#share hgroup
+  h2
+    @extend %exo-700
+    font-size: 32pt
+    color: $black
+    margin-bottom: 10px
+    text-transform: none
+    margin-top: 10px
+
+  p
+    font-size: 14pt
+    color: #888
+    width: 500px
+    line-height: 1.6
+
+  &
+    padding-bottom: 30px
+
+#share .area
+  @extend %clearfix
+
+/* Poster */
+#share .slim
+  padding: 0
+  width: 290px
+  float: left
+
+  a
+    border-bottom: 0
+
+  p.poster
+    background: #ebebeb
+    border-bottom: solid 1px #ddd
+    border-right: solid 1px #ddd
+    width: 250px
+    line-height: 1
+
+    position: relative
+    top: 10px
+    left: 10px
+
+  p.poster img
+    position: relative
+    top: -10px
+    left: -10px
+
+/* Side thing */
+#share .side
+  float: left
+  width: 300px
+  padding: 0
+
+/* Poster links */
+#share .posters
+  &
+    height: 250px
+    position: relative
+    top: -10px
+
+  a
+    min-height: 41px
+    border-bottom: 0
+    overflow: hidden
+    margin-bottom: 20px
+    display: block
+    line-height: 1.5
+    padding: 10px 0
+
+  a:hover
+    background: #f3f3f3
+
+  strong
+    display: block
+
+  strong:after
+    content: ' #{$rsaquo}'
+
+  em
+    font-style: normal
+    font-weight: normal
+
+  a:before
+    content: ''
+    display: block
+    width: 41px
+    height: 41px
+    background: url(../images/sprite/jpeg.png) 0 0 no-repeat
+
+    float: left
+    margin-right: 15px
+
+/* Facebook/twitter heading */
+#share .updates
+  line-height: 1.5
+
+  strong
+    display: block
+    text-transform: none
+    letter-spacing: 0
+    font-size: 1.3em
+
+#share .share-buttons
+  &
+    width: 500px
+
+  // Twitter
+  iframe
+    margin-right: 5px
+
+  a
+    height: 28px
+    line-height: 28px
+    border-bottom: 0
+    white-space: nowrap
+    display: inline-block
+    vertical-align: top
+    color: $black
+
+  a.facebook
+    padding: 0 5px
+
+    &:before
+      content: ''
+      display: inline-block
+      margin-right: 10px
+      width: 24px
+      height: 24px
+      position: relative
+      top: 2px
+      left: 2px
+      background: url(../images/sprite/icon-facebook.png)
+
+    &:hover
+      background: #f3f3f3
+
 /* == Footer ================================================================== */
 
 #footer
@@ -891,8 +1032,7 @@ body
     margin-bottom: 30px
 
     h3
-      font-family: exo, sans-serif
-      font-weight: 700
+      @extend %exo-700
       font-size: 32pt
       color: $black
       margin-bottom: -3px

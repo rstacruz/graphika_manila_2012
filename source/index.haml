@@ -605,6 +605,43 @@
             * __Is there a guaranteed seating arrangement?__
             As much as we'd like to, there is no guaranteed seating arrangement because we have multiple ticketing partners that keep us from assigning seats. Seats are on a first-come, first-served basis only.
 
+/ == Share section ===========================================================
+
+%section.anchor#share
+  %hgroup
+    %h2 Share the love.
+    %p Download the official Graphika Manila 2012 poster below.
+
+  .display
+    .area
+      .content.slim
+        %p.poster
+          %a{href: '/images/poster-web.jpg', target: '_blank'}
+            = image_tag 'preview.jpg', width: 250, height: 352
+
+      .content.side
+        %p.posters
+          %a{href: '/images/poster-print.jpg', target: '_blank'}
+            %strong Hi-res poster
+            %em Great for printing (A3 size)
+
+          %a{href: '/images/poster-web.jpg', target: '_blank'}
+            %strong Low-res poster
+            %em Great for sharing online
+
+        %p.updates
+          %strong Get our latest updates
+          on Twitter and Facebook!
+
+        %p.share-buttons
+          != '<a href="https://twitter.com/graphikamanila" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @graphikamanila</a>'
+          != '<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
+
+          %a.facebook{href: 'http://facebook.com/graphikamanila', target: '_blank'}
+            graphikamanila
+
+
+
 / == Content section: contact us =============================================
 
 %section#contact
