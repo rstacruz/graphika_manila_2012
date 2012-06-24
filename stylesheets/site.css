@@ -53,8 +53,8 @@ section > hgroup h1, section > hgroup h2, section > hgroup h3 { letter-spacing: 
 .wf-armata-n4-active .content h2, .content .wf-armata-n4-active h2, .wf-armata-n4-active nav.main a, nav.main .wf-armata-n4-active a, .wf-armata-n4-active .tickets aside ul a strong, .tickets aside ul a .wf-armata-n4-active strong, .wf-armata-n4-active #tickets .conference-pass li em, #tickets .conference-pass li .wf-armata-n4-active em, .wf-armata-n4-active .speakers .card header h2, .speakers .card header .wf-armata-n4-active h2, .wf-armata-n4-active .speakers .card header h3, .speakers .card header .wf-armata-n4-active h3, .wf-armata-n4-active .countdown .box.hours small, .countdown .box.hours .wf-armata-n4-active small, .wf-armata-n4-active .countdown .box.minutes small, .countdown .box.minutes .wf-armata-n4-active small, .wf-armata-n4-active .countdown .box.seconds small, .countdown .box.seconds .wf-armata-n4-active small, .wf-armata-n4-active #past-speakers li strong, #past-speakers li .wf-armata-n4-active strong, .wf-armata-n4-active #info h2, #info .wf-armata-n4-active h2, .wf-armata-n4-active #direct-purchase article h3, #direct-purchase article .wf-armata-n4-active h3, .wf-armata-n4-active .news li a.perm, .news li .wf-armata-n4-active a.perm { font-family: armata; }
 
 /* Type: Exo 700 */
-header.intro .info strong, nav.screen strong, section aside > h3, #tickets .conference-pass li strong, .speakers .card header h5, a.call-for-entries strong, .entries-info p.download strong, .entries-info header h2 strong, .entries-info h3 { font-family: "helvetica neue", sans-serif; font-weight: 700; }
-.wf-exo-n7-active header.intro .info strong, header.intro .info .wf-exo-n7-active strong, .wf-exo-n7-active nav.screen strong, nav.screen .wf-exo-n7-active strong, .wf-exo-n7-active section aside > h3, section .wf-exo-n7-active aside > h3, .wf-exo-n7-active #tickets .conference-pass li strong, #tickets .conference-pass li .wf-exo-n7-active strong, .wf-exo-n7-active .speakers .card header h5, .speakers .card header .wf-exo-n7-active h5, .wf-exo-n7-active a.call-for-entries strong, a.call-for-entries .wf-exo-n7-active strong, .wf-exo-n7-active .entries-info p.download strong, .entries-info p.download .wf-exo-n7-active strong, .wf-exo-n7-active .entries-info header h2 strong, .entries-info header h2 .wf-exo-n7-active strong, .wf-exo-n7-active .entries-info h3, .entries-info .wf-exo-n7-active h3 { font-family: exo; }
+header.intro .info strong, nav.screen strong, section aside > h3, #tickets .conference-pass li strong, .speakers .card header h5, #share hgroup h2, .countdown header h3, a.call-for-entries strong, .entries-info p.download strong, .entries-info header h2 strong, .entries-info h3 { font-family: "helvetica neue", sans-serif; font-weight: 700; }
+.wf-exo-n7-active header.intro .info strong, header.intro .info .wf-exo-n7-active strong, .wf-exo-n7-active nav.screen strong, nav.screen .wf-exo-n7-active strong, .wf-exo-n7-active section aside > h3, section .wf-exo-n7-active aside > h3, .wf-exo-n7-active #tickets .conference-pass li strong, #tickets .conference-pass li .wf-exo-n7-active strong, .wf-exo-n7-active .speakers .card header h5, .speakers .card header .wf-exo-n7-active h5, .wf-exo-n7-active #share hgroup h2, #share hgroup .wf-exo-n7-active h2, .wf-exo-n7-active .countdown header h3, .countdown header .wf-exo-n7-active h3, .wf-exo-n7-active a.call-for-entries strong, a.call-for-entries .wf-exo-n7-active strong, .wf-exo-n7-active .entries-info p.download strong, .entries-info p.download .wf-exo-n7-active strong, .wf-exo-n7-active .entries-info header h2 strong, .entries-info header h2 .wf-exo-n7-active strong, .wf-exo-n7-active .entries-info h3, .entries-info .wf-exo-n7-active h3 { font-family: exo; }
 
 /* Type: Exo 700 caps */
 header.intro .info strong, nav.screen strong, section aside > h3, #tickets .conference-pass li strong, .speakers .card header h5 { text-transform: uppercase; letter-spacing: 1px; }
@@ -66,8 +66,8 @@ section > hgroup h1, section > hgroup h2, section > hgroup h3 { color: #aaaaaa; 
 #tickets .content ul, #tickets .conference-pass ul, .speakers .card nav ul, #past-speakers ul, #info ul, #faq ul, #direct-purchase ul, .news ul, #tickets .content li, #tickets .conference-pass li, .speakers .card nav li, #past-speakers li, #info li, #faq li, #direct-purchase li, .news li { margin: 0; padding: 0; list-style-type: none; }
 
 /* Clearfix */
-#tickets .conference-pass ul, #past-speakers ul, #info .full, #faq ul, #direct-purchase .full, .entries-info { *zoom: 1; }
-#tickets .conference-pass ul:after, #past-speakers ul:after, #info .full:after, #faq ul:after, #direct-purchase .full:after, .entries-info:after { content: ""; display: table; clear: both; }
+#tickets .conference-pass ul, #share .area, #past-speakers ul, #info .full, #faq ul, #direct-purchase .full, .entries-info { *zoom: 1; }
+#tickets .conference-pass ul:after, #share .area:after, #past-speakers ul:after, #info .full:after, #faq ul:after, #direct-purchase .full:after, .entries-info:after { content: ""; display: table; clear: both; }
 
 /* == Content normalize ======================================================= */
 .content { line-height: 1.6; padding-top: 30px; }
@@ -241,6 +241,43 @@ section .side { width: 350px; float: right; }
 /* Fix the past speakers's height so the background tiles perfectly */
 #past-speakers .card { padding-bottom: 30px; height: 620px; }
 
+/* == Share =================================================================== */
+#share { background: url(../images/fiddlesticks.png) center 300px repeat-x; }
+
+/* Heading */
+#share hgroup h2 { font-size: 32pt; color: #222222; margin-bottom: 10px; text-transform: none; margin-top: 10px; }
+#share hgroup p { font-size: 14pt; color: #888888; width: 500px; line-height: 1.6; }
+#share hgroup { padding-bottom: 30px; }
+
+/* Poster */
+#share .slim { padding: 0; width: 290px; float: left; }
+#share .slim a { border-bottom: 0; }
+#share .slim p.poster { background: #ebebeb; border-bottom: solid 1px #dddddd; border-right: solid 1px #dddddd; width: 250px; line-height: 1; position: relative; top: 10px; left: 10px; }
+#share .slim p.poster img { position: relative; top: -10px; left: -10px; }
+
+/* Side thing */
+#share .side { float: left; width: 300px; padding: 0; }
+
+/* Poster links */
+#share .posters { height: 250px; position: relative; top: -10px; }
+#share .posters a { min-height: 41px; border-bottom: 0; overflow: hidden; margin-bottom: 20px; display: block; line-height: 1.5; padding: 10px 0; }
+#share .posters a:hover { background: #f3f3f3; }
+#share .posters strong { display: block; }
+#share .posters strong:after { content: " \203a"; }
+#share .posters em { font-style: normal; font-weight: normal; }
+#share .posters a:before { content: ""; display: block; width: 41px; height: 41px; background: url(../images/sprite/jpeg.png) 0 0 no-repeat; float: left; margin-right: 15px; }
+
+/* Facebook/twitter heading */
+#share .updates { line-height: 1.5; }
+#share .updates strong { display: block; text-transform: none; letter-spacing: 0; font-size: 1.3em; }
+
+#share .share-buttons { width: 500px; }
+#share .share-buttons iframe { margin-right: 5px; }
+#share .share-buttons a { height: 28px; line-height: 28px; border-bottom: 0; white-space: nowrap; display: inline-block; vertical-align: top; color: #222222; }
+#share .share-buttons a.facebook { padding: 0 5px; }
+#share .share-buttons a.facebook:before { content: ""; display: inline-block; margin-right: 10px; width: 24px; height: 24px; position: relative; top: 2px; left: 2px; background: url(../images/sprite/icon-facebook.png); }
+#share .share-buttons a.facebook:hover { background: #f3f3f3; }
+
 /* == Footer ================================================================== */
 #footer { margin-top: 50px; }
 #footer > div { height: 444px; background: url(../images/footer.jpg) 100px bottom no-repeat; position: relative; }
@@ -302,7 +339,7 @@ body { -webkit-backface-visibility: hidden; }
 .countdown { margin: 90px 0 60px 0; background: url(../images/fiddlesticks.png) center 0 repeat-x; }
 .countdown > div { padding-left: 225px; }
 .countdown header { line-height: 1.5; width: 420px; margin-bottom: 30px; }
-.countdown header h3 { font-family: exo, sans-serif; font-weight: 700; font-size: 32pt; color: #222222; margin-bottom: -3px; }
+.countdown header h3 { font-size: 32pt; color: #222222; margin-bottom: -3px; }
 .countdown header p { font-size: 12pt; color: #888888; }
 .countdown .box.days { margin-bottom: 50px; font-family: exo, sans-serif; font-weight: 700; font-size: 80pt; }
 .countdown .box.days strong { text-shadow: 4px 4px 0 #cccccc; color: #222222; }
