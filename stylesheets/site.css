@@ -237,6 +237,10 @@ section .side { width: 350px; float: right; }
 #contact .content h2, #contact .content h3, #contact .content strong { color: #aaaaaa; font-size: 1.1em; text-transform: none; margin-bottom: 0; }
 #contact .content h2 + p, #contact .content h3 + p, #contact .content strong + p { margin-top: 0; }
 
+/* == About us ================================================================ */
+/* Fix the past speakers's height so the background tiles perfectly */
+#past-speakers .card { padding-bottom: 30px; height: 620px; }
+
 /* == Footer ================================================================== */
 #footer { margin-top: 50px; }
 #footer > div { height: 444px; background: url(../images/footer.jpg) 100px bottom no-repeat; position: relative; }
