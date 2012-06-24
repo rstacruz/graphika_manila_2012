@@ -616,16 +616,16 @@
     .area
       .content.slim
         %p.poster
-          %a{href: '/images/poster-web.jpg', target: '_blank'}
+          %a{href: image_path('poster-web.jpg'), target: '_blank'}
             = image_tag 'preview.jpg', width: 250, height: 352
 
       .content.side
         %p.posters
-          %a{href: '/images/poster-print.jpg', target: '_blank'}
+          %a{href: image_path('poster-print.jpg'), target: '_blank'}
             %strong Hi-res poster
             %em Great for printing (A3 size)
 
-          %a{href: '/images/poster-web.jpg', target: '_blank'}
+          %a{href: image_path('poster-web.jpg'), target: '_blank'}
             %strong Low-res poster
             %em Great for sharing online
 
