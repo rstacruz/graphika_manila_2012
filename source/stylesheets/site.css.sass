@@ -173,6 +173,9 @@ a
   +if-position(0, 0, auto, 0, $position: fixed)
   z-index: 11
 
+  +if-screen-width($max: 1024px)
+    left: 30px
+
   > div
     @extend %page
     position: relative
