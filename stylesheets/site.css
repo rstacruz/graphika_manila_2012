@@ -212,6 +212,7 @@ section .side { width: 350px; float: right; }
 /* Conference pass, tickets */
 #tickets .conference-pass { width: 400px; }
 #tickets .conference-pass ul { margin-top: 0; border: 0; margin-bottom: 20px; }
+@media only screen and (max-width: 1024px) { #tickets .conference-pass { position: relative; right: 30px; } }
 #tickets .conference-pass li strong, #tickets .conference-pass li em { display: block; text-align: right; }
 #tickets .conference-pass li strong { font-size: 18pt; text-shadow: 2px 2px 0 #eeeeee; }
 #tickets .conference-pass li em { font-style: normal; }
@@ -223,14 +224,16 @@ section .side { width: 350px; float: right; }
 /* Ticket images */
 #tickets .tickets { margin-top: 50px; position: relative; }
 #tickets .tickets img { width: 320px; height: 195.2px; -webkit-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); position: absolute; -webkit-transition: -webkit-transform 400ms ease-in-out, right 400ms ease-in-out, top 400ms ease-in-out, opacity 400ms ease-in-out; -moz-transition: -moz-transform 400ms ease-in-out, right 400ms ease-in-out, top 400ms ease-in-out, opacity 400ms ease-in-out; -ms-transition: -ms-transform 400ms ease-in-out, right 400ms ease-in-out, top 400ms ease-in-out, opacity 400ms ease-in-out; -o-transition: -o-transform 400ms ease-in-out, right 400ms ease-in-out, top 400ms ease-in-out, opacity 400ms ease-in-out; transition: transform 400ms ease-in-out, right 400ms ease-in-out, top 400ms ease-in-out, opacity 400ms ease-in-out; }
-#tickets .tickets img.pro { background: #222222; right: 0; top: 0; z-index: 0; -webkit-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); -moz-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); -webkit-transform: rotate(4deg); -moz-transform: rotate(4deg); -ms-transform: rotate(4deg); -o-transform: rotate(4deg); transform: rotate(4deg); }
-#tickets .tickets img.student { background: #fafafa; right: -30px; top: 90px; z-index: 1; -webkit-transform: rotate(-4deg); -moz-transform: rotate(-4deg); -ms-transform: rotate(-4deg); -o-transform: rotate(-4deg); transform: rotate(-4deg); }
+#tickets .tickets img.pro { background: #222222; right: 30px; top: 0; z-index: 0; -webkit-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); -moz-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); -webkit-transform: rotate(4deg); -moz-transform: rotate(4deg); -ms-transform: rotate(4deg); -o-transform: rotate(4deg); transform: rotate(4deg); }
+#tickets .tickets img.student { background: #fafafa; right: 0; top: 90px; z-index: 1; -webkit-transform: rotate(-4deg); -moz-transform: rotate(-4deg); -ms-transform: rotate(-4deg); -o-transform: rotate(-4deg); transform: rotate(-4deg); }
+@media only screen and (max-width: 1024px) { #tickets .tickets img.pro { right: 50px; }
+  #tickets .tickets img.student { right: 20px; } }
 #tickets .tickets:hover img.pro { top: 10px; -webkit-transform: rotate(-4deg) scale(1.1); -moz-transform: rotate(-4deg) scale(1.1); -ms-transform: rotate(-4deg) scale(1.1); -o-transform: rotate(-4deg) scale(1.1); transform: rotate(-4deg) scale(1.1); }
 #tickets .tickets:hover img.student { top: 140px; -webkit-transform: rotate(-8deg) perspective(700px) rotateX(-40deg); -moz-transform: rotate(-8deg) perspective(700px) rotateX(-40deg); -ms-transform: rotate(-8deg) perspective(700px) rotateX(-40deg); -o-transform: rotate(-8deg) perspective(700px) rotateX(-40deg); transform: rotate(-8deg) perspective(700px) rotateX(-40deg); opacity: 0; }
 
 /* == Content: Contact us ===================================================== */
-#contact .display { background: #0d0d0d; color: #888888; padding: 40px 0; }
-#contact .content { padding-left: 0; min-height: 500px; }
+#contact .display { background: #0d0d0d; color: #888888; padding: 40px 0 0 0; }
+#contact .content { padding-left: 0; min-height: 300px; }
 #contact .content h2, #contact .content h3, #contact .content strong { color: #aaaaaa; font-size: 1.1em; text-transform: none; margin-bottom: 0; }
 #contact .content h2 + p, #contact .content h3 + p, #contact .content strong + p { margin-top: 0; }
 
