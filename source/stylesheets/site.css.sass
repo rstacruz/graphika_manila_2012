@@ -3,6 +3,7 @@
 @import ifkit/position
 @import ifkit/form_reset
 @import ifkit/normalize
+@import ifkit/media
 @import ifkit/animation
 
 // == Constants ===============================================================
@@ -164,6 +165,7 @@ a
 
 .hide
   display: none
+
 
 /* == Logo ==================================================================== */
 
@@ -598,6 +600,11 @@ section
     border: 0
     margin-bottom: 20px
 
+  // iOS
+  +if-screen-width($max: 1024px)
+    position: relative
+    right: 30px
+
   li strong, li em
     display: block
     text-align: right
@@ -650,7 +657,7 @@ section
 
   img.pro
     background: #222
-    right: 0
+    right: 30px
     top: 0
     z-index: 0
     +box-shadow(0 6px 18px rgba(black, 0.4))
@@ -658,10 +665,17 @@ section
 
   img.student
     background: #fafafa
-    right: -30px
+    right: 0
     top: 90px
     z-index: 1
     +transform(rotate(-4deg))
+
+  // iOS
+  +if-screen-width($max: 1024px)
+    img.pro
+      right: 50px
+    img.student
+      right: 20px
 
   &:hover
     img.pro
