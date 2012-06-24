@@ -120,6 +120,7 @@ a { color: #999999; text-decoration: none; }
 
 /* == Logo ==================================================================== */
 #logo { position: fixed; top: 0; right: 0; left: 0; z-index: 11; }
+@media only screen and (max-width: 1024px) { #logo { left: 30px; } }
 #logo > div { position: relative; top: 20px; }
 #logo a { position: relative; width: 150px; height: 79px; overflow: hidden; display: block; }
 #logo a > div { position: absolute; top: 0; left: 0; overflow: hidden; }
