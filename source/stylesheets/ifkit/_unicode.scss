@@ -26,3 +26,14 @@ $esckey: '\238b';    // Escape key
 $capskey: '\21ea';   // Caps lock key
 $returnkey: '\23ce'; // Return key
 $bkspkey: '\232b';   // Backspace key
+
+// https://en.wikipedia.org/wiki/Ndash
+$figdash: '\2012';  // Figure dash
+$ndash: '\2013';  // En dash
+$mdash: '\2014';  // Em dash
+
+// https://en.wikipedia.org/wiki/Bullet_(typography)
+$bull: '\2022';       // Circular bullet (&bull;)
+$tribull: '\2023';    // Triangular bullet
+$whitebull: '\25e6';  // White bullet, hollow
+$middot: '\2219';     // Middle dot
